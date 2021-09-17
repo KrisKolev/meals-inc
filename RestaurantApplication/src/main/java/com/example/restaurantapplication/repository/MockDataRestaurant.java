@@ -2,6 +2,7 @@ package com.example.restaurantapplication.repository;
 
 import com.example.restaurantapplication.model.Employee;
 import com.example.restaurantapplication.model.Product;
+import com.example.restaurantapplication.model.Table;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,18 +11,26 @@ public class MockDataRestaurant
 {
     private List<Product> productList;
     private List<Employee> employeesList;
+    private List<Table> tablesList;
 
     public MockDataRestaurant()
     {
         this.productList = new ArrayList<>(List.of(
-                new Product(0, "Full English Breakfast", 15),
-                new Product(1, "Grilled Chicken", 13)
+                new Product(0, "Full English Breakfast", 15.00),
+                new Product(1, "Grilled Chicken", 13.50),
+                new Product(2, "Coca Cola", 3.50)
         ));
 
         this.employeesList = new ArrayList<>(List.of(
                 new Employee(0, "Kris"),
                 new Employee(1, "Neyko"),
                 new Employee(2, "Petar")
+        ));
+
+        this.tablesList = new ArrayList<>(List.of(
+                new Table(0),
+                new Table(1),
+                new Table(2)
         ));
     }
 
@@ -58,4 +67,26 @@ public class MockDataRestaurant
         }
         return null;
     }
+
+    public List<Table> GetTables()
+    {
+        return this.tablesList;
+    }
+
+    public Table GetTable(int id)
+    {
+        for (Table table : this.tablesList)
+        {
+            if (table.getTableId() == id)
+            {
+                return table;
+            }
+        }
+        return null;
+    }
+
+
+
+
+
 }
