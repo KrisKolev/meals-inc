@@ -31,14 +31,29 @@ public class EmployeeController
         }
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/id/{id}")
     public ResponseEntity<Employee> GetEmployeeById(@PathVariable("id") int id)
     {
-        Employee employee = mockDataRestaurant.GetEmployee(id);
+        Employee employee = mockDataRestaurant.GetEmployeeById(id);
 
         if (employee != null)
         {
             return ResponseEntity.ok().body(employee);
+        }
+        else
+        {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @GetMapping("/name/{name}")
+    public ResponseEntity<List<Employee>> GetEmployeeByName(@PathVariable("name") String name)
+    {
+        List<Employee> employees = mockDataRestaurant.GetEmployeeByName(name);
+
+        if (employees != null)
+        {
+            return ResponseEntity.ok().body(employees);
         }
         else
         {

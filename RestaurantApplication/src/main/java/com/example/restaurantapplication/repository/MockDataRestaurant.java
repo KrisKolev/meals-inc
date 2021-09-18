@@ -34,12 +34,14 @@ public class MockDataRestaurant
         ));
     }
 
+/////////////////////////////////////////////////////////////////////////////////////
+
     public List<Product> GetProducts()
     {
         return this.productList;
     }
 
-    public Product GetProduct(int id)
+    public Product GetProductById(int id)
     {
         for (Product product : this.productList)
         {
@@ -51,12 +53,42 @@ public class MockDataRestaurant
         return null;
     }
 
+    public List<Product> GetProductByPrice(double price)
+    {
+        List<Product> productsTemp = new ArrayList<>();
+
+        for (Product product : this.productList)
+        {
+            if (product.getProductPrice() == price)
+            {
+                productsTemp.add(product);
+            }
+        }
+        return productsTemp;
+    }
+
+    public List<Product> GetProductByName(String name)
+    {
+        List<Product> productsTemp = new ArrayList<>();
+
+        for (Product product : this.productList)
+        {
+            if (product.getProductName().contains(name))
+            {
+                productsTemp.add(product);
+            }
+        }
+        return productsTemp;
+    }
+
+/////////////////////////////////////////////////////////////////////////////////////
+
     public List<Employee> GetEmployees()
     {
         return this.employeesList;
     }
 
-    public Employee GetEmployee(int id)
+    public Employee GetEmployeeById(int id)
     {
         for (Employee employee : this.employeesList)
         {
@@ -68,12 +100,28 @@ public class MockDataRestaurant
         return null;
     }
 
+    public List<Employee> GetEmployeeByName(String name)
+    {
+        List<Employee> employeesTemp = new ArrayList<>();
+
+        for (Employee employee : this.employeesList)
+        {
+            if (employee.getEmployeeName().contains(name))
+            {
+                employeesTemp.add(employee);
+            }
+        }
+        return employeesTemp;
+    }
+
+/////////////////////////////////////////////////////////////////////////////////////
+
     public List<Table> GetTables()
     {
         return this.tablesList;
     }
 
-    public Table GetTable(int id)
+    public Table GetTableById(int id)
     {
         for (Table table : this.tablesList)
         {
@@ -84,9 +132,4 @@ public class MockDataRestaurant
         }
         return null;
     }
-
-
-
-
-
 }

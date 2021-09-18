@@ -31,10 +31,10 @@ public class TableController
         }
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/id/{id}")
     public ResponseEntity<Table> GetTableById(@PathVariable("id")int id)
     {
-        Table table = mockDataRestaurant.GetTable(id);
+        Table table = mockDataRestaurant.GetTableById(id);
 
         if (table != null)
         {
