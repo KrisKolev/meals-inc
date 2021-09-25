@@ -1,6 +1,5 @@
 package com.example.restaurantapplication.controller;
 
-import com.example.restaurantapplication.model.Employee;
 import com.example.restaurantapplication.model.Product;
 import com.example.restaurantapplication.repository.MockDataRestaurant;
 import org.springframework.http.ResponseEntity;
