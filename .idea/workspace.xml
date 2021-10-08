@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d893ce86-0612-4c56-b0c6-c49e2b2ba26b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/s3-cb04-its.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation/RequirementsDocument.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/RequirementsDocument.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restaurantapplication/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/restaurantapplication/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restaurantapplication/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/restaurantapplication/controller/ProductController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +78,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="D:\UNIVERSITY\Software Engineering\ThirdSemester\IndividualProject\s3-cb04-its\RestaurantApplicationFrontend\node_modules\typescript\lib" />
   </component>
   <component name="RunManager" selected="Spring Boot.RestaurantApplication">
     <configuration name="RestaurantApplicationTests.GetEmployeeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -205,6 +206,18 @@
       <workItem from="1632748929764" duration="84000" />
       <workItem from="1632750288574" duration="123000" />
       <workItem from="1632750589309" duration="42000" />
+      <workItem from="1632841738597" duration="50000" />
+      <workItem from="1632842508776" duration="50000" />
+      <workItem from="1633012481982" duration="305000" />
+      <workItem from="1633019876910" duration="3545000" />
+      <workItem from="1633041735755" duration="602000" />
+      <workItem from="1633083628513" duration="635000" />
+      <workItem from="1633274272817" duration="63000" />
+      <workItem from="1633447156790" duration="959000" />
+      <workItem from="1633448671901" duration="2169000" />
+      <workItem from="1633521094492" duration="35000" />
+      <workItem from="1633607650973" duration="4065000" />
+      <workItem from="1633696602211" duration="2470000" />
     </task>
     <servers />
   </component>
