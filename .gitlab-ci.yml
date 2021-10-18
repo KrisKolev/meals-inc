@@ -5,12 +5,12 @@ stages:
 build:
   stage: build
   script:
-    - cd RestaurantApplicationBackend/
-    - ./gradlew build -x test
+    - cd RestaurantApplicationBackend
+    - .\gradlew build -x test
 
 
 test:
   stage: test
   script:
-    - cd RestaurantApplicationBackend/
-    - ./gradlew test
+    - cd RestaurantApplicationBackend
+    - .\gradlew test
