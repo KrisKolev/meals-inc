@@ -1,239 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d893ce86-0612-4c56-b0c6-c49e2b2ba26b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="527494ec-0573-4eee-9f11-08bfdd63f56b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Documentation/RequirementsDocument.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/RequirementsDocument.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restaurantapplication/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/restaurantapplication/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restaurantapplication/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/restaurantapplication/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation/SoftwareArchitectureDocument.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/SoftwareArchitectureDocument.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantApplicationFrontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationFrontend/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantApplicationFrontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationFrontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantApplicationFrontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationFrontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/app.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/employees/employees.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/employees/employees.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/employees/employees.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/employees/employees.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/products/products.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/products/products.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restaurantapplication/RestaurantApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restaurantapplication/controller/EmployeeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restaurantapplication/controller/ProductController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restaurantapplication/controller/TableController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restaurantapplication/model/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restaurantapplication/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restaurantapplication/model/Table.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restaurantapplication/repository/MockDataRestaurant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/restaurantapplication/RestaurantApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$">
-      <ProjectState />
-    </projectState>
-  </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <task path="$PROJECT_DIR$">
-          <activation />
-        </task>
-        <projects_view>
-          <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="RestaurantApplication" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitSEFilterConfiguration">
-    <file-type-list>
-      <filtered-out-file-type name="LOCAL_BRANCH" />
-      <filtered-out-file-type name="REMOTE_BRANCH" />
-      <filtered-out-file-type name="TAG" />
-      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
-    </file-type-list>
-  </component>
-  <component name="ProjectId" id="1yEggTLUBpcO3PavTVFaT3rojGy" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1zgDWAMNwVCP3wGXXOcS1LJo5fQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="RequestMappingsPanelOrder0" value="0" />
-    <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="75" />
-    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="ts.external.directory.path" value="D:\UNIVERSITY\Software Engineering\ThirdSemester\IndividualProject\s3-cb04-its\RestaurantApplicationFrontend\node_modules\typescript\lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/RestaurantApplicationBackend" />
   </component>
-  <component name="RunManager" selected="Spring Boot.RestaurantApplication">
-    <configuration name="RestaurantApplicationTests.GetEmployeeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.example.restaurantapplication.RestaurantApplicationTests.GetEmployeeTest&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="RestaurantApplicationTests.GetProducts" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.example.restaurantapplication.RestaurantApplicationTests.GetProducts&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="RestaurantApplicationTests.GetTablesTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.example.restaurantapplication.RestaurantApplicationTests.GetTablesTest&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="RestaurantApplicationTests,GetEmployeeTest and 2 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RestaurantApplication.test" />
-      <option name="TEST_OBJECT" value="pattern" />
-      <patterns>
-        <pattern testClass="com.example.restaurantapplication.RestaurantApplicationTests,GetEmployeeTest" />
-        <pattern testClass="com.example.restaurantapplication.RestaurantApplicationTests,GetProducts" />
-        <pattern testClass="com.example.restaurantapplication.RestaurantApplicationTests,GetTables" />
-      </patterns>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RestaurantApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="RestaurantApplication.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.restaurantapplication.RestaurantApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Gradle.RestaurantApplicationTests.GetTablesTest" />
-        <item itemvalue="Gradle.RestaurantApplicationTests.GetProducts" />
-        <item itemvalue="JUnit.RestaurantApplicationTests,GetEmployeeTest and 2 more" />
-        <item itemvalue="Gradle.RestaurantApplicationTests.GetEmployeeTest" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d893ce86-0612-4c56-b0c6-c49e2b2ba26b" name="Default Changelist" comment="" />
-      <created>1631822273678</created>
+      <changelist id="527494ec-0573-4eee-9f11-08bfdd63f56b" name="Default Changelist" comment="" />
+      <created>1634560870023</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1631822273678</updated>
-      <workItem from="1631822275458" duration="132000" />
-      <workItem from="1631822755132" duration="350000" />
-      <workItem from="1631823594920" duration="97000" />
-      <workItem from="1631823851735" duration="123000" />
-      <workItem from="1631824695283" duration="988000" />
-      <workItem from="1631829228720" duration="1912000" />
-      <workItem from="1631831443854" duration="26000" />
-      <workItem from="1631867720642" duration="2704000" />
-      <workItem from="1631880320133" duration="499000" />
-      <workItem from="1631886396986" duration="501000" />
-      <workItem from="1631978716131" duration="6151000" />
-      <workItem from="1631995194512" duration="37000" />
-      <workItem from="1632130616548" duration="19000" />
-      <workItem from="1632131850536" duration="139000" />
-      <workItem from="1632136446623" duration="303000" />
-      <workItem from="1632143051547" duration="25000" />
-      <workItem from="1632431427959" duration="647000" />
-      <workItem from="1632483036174" duration="660000" />
-      <workItem from="1632484305960" duration="2758000" />
-      <workItem from="1632495850061" duration="764000" />
-      <workItem from="1632607709015" duration="139000" />
-      <workItem from="1632607952866" duration="34000" />
-      <workItem from="1632745507197" duration="492000" />
-      <workItem from="1632748929764" duration="84000" />
-      <workItem from="1632750288574" duration="123000" />
-      <workItem from="1632750589309" duration="42000" />
-      <workItem from="1632841738597" duration="50000" />
-      <workItem from="1632842508776" duration="50000" />
-      <workItem from="1633012481982" duration="305000" />
-      <workItem from="1633019876910" duration="3545000" />
-      <workItem from="1633041735755" duration="602000" />
-      <workItem from="1633083628513" duration="635000" />
-      <workItem from="1633274272817" duration="63000" />
-      <workItem from="1633447156790" duration="959000" />
-      <workItem from="1633448671901" duration="2169000" />
-      <workItem from="1633521094492" duration="35000" />
-      <workItem from="1633607650973" duration="4065000" />
-      <workItem from="1633696602211" duration="2470000" />
+      <updated>1634560870023</updated>
+      <workItem from="1634560872284" duration="22000" />
     </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

@@ -3,14 +3,12 @@ package com.example.restaurantapplication.controller;
 import com.example.restaurantapplication.model.Table;
 import com.example.restaurantapplication.repository.MockDataRestaurant;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@CrossOrigin("http://localhost:4200")
 @RequestMapping("/tables")
 public class TableController
 {

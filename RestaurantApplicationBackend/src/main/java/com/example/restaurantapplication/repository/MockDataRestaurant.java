@@ -30,7 +30,13 @@ public class MockDataRestaurant
         this.tablesList = new ArrayList<>(List.of(
                 new Table(0),
                 new Table(1),
-                new Table(2)
+                new Table(2),
+                new Table(3),
+                new Table(4),
+                new Table(5),
+                new Table(6),
+                new Table(7),
+                new Table(8)
         ));
     }
 

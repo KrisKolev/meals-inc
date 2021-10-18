@@ -15,7 +15,6 @@ export class EmployeesService {
     }
 
     getEmployees() {
-        console.log("hello");
         return this.http.get(`${this.REST_API_EMPLOYEES}`);
     }
 }

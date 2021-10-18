@@ -1,27 +1,94 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { ProductsComponent } from './products/products.component';
+import { TablesComponent } from './tables/tables.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatIconModule} from "@angular/material/icon";
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
+import {MatInputModule} from "@angular/material/input";
+import {MatDialogModule} from "@angular/material/dialog";
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatSelectModule} from "@angular/material/select";
+import {MatSliderModule} from "@angular/material/slider";
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import {MatRadioModule} from "@angular/material/radio";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatAutocompleteModule} from "@angular/material/autocomplete";
+import {MatButtonModule} from "@angular/material/button";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import {MatCardModule} from "@angular/material/card";
+import {MatMenuModule} from "@angular/material/menu";
+import { RouterModule } from '@angular/router';
 
 import { EmployeesService } from './employees/employees.service';
 import { ProductsService } from './products/products.service';
+import { TablesService } from './tables/tables.service';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeesComponent,
-    ProductsComponent
+    ProductsComponent,
+    TablesComponent,
+    LandingPageComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatButtonToggleModule,
+    MatInputModule,
+    MatDialogModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
+    MatSelectModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatButtonModule,
+    MatAutocompleteModule,
+    MatCheckboxModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    RouterModule.forRoot([
+/*      {path: 'cinemas-page', component: CinemasPageComponent},
+      {path: 'covid-page', component: CovidPageComponent},
+      {path: 'offers-page', component: OffersPageComponent},
+      {path: 'landing-page', component: LandingPageComponent},
+      {path: 'login-page', component: LoginPageComponent},
+      {path: 'program-page', component: ProgramPageComponent},*/
+    ]),
   ],
   providers: [
     EmployeesService,
-    ProductsService
+    ProductsService,
+    TablesService
   ],
   bootstrap: [AppComponent]
 })

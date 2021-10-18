@@ -1,0 +1,11 @@
+
+.name {
+  display: flex;
+  justify-content: center;
+  flex: auto;
+  font-size: 50px;
+}
+
+.toolbar {
+  padding-block: 50px;
+}
