@@ -1,5 +1,4 @@
 import {Component, ViewEncapsulation} from '@angular/core';
-import {ProductsService} from "./products/products.service";
 
 @Component({
   selector: 'app-root',
@@ -8,9 +7,9 @@ import {ProductsService} from "./products/products.service";
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-  title = 'Restaurant Application';
+  title = 'Meals INC.';
 
-  constructor(service: ProductsService) {
+  constructor() {
 
   }
 }

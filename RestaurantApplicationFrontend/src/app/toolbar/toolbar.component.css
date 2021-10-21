@@ -4,8 +4,41 @@
   justify-content: center;
   flex: auto;
   font-size: 50px;
+  transition: 0.3s;
 }
 
 .toolbar {
+  background-color: #5897b1;
   padding-block: 50px;
+}
+
+.home-icon {
+  transition: 0.3s;
+}
+
+.home-icon:hover {
+  background-color: #325a68;
+  color: white;
+}
+
+.info-icon {
+  transition: 0.3s;
+}
+
+.info-icon:hover {
+  color: white;
+}
+
+.share-icon {
+  transition: 0.3s;
+}
+
+.share-icon:hover {
+  color: white;
+}
+
+.footer {
+  justify-content: center;
+  position: absolute;
+  bottom: 0px;
 }

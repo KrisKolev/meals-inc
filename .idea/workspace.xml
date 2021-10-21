@@ -1,40 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="527494ec-0573-4eee-9f11-08bfdd63f56b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentation/RequirementsDocument.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/RequirementsDocument.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentation/SoftwareArchitectureDocument.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/SoftwareArchitectureDocument.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantApplicationFrontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationFrontend/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantApplicationFrontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationFrontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantApplicationFrontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationFrontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/app.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/employees/employees.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/employees/employees.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/employees/employees.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/employees/employees.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/products/products.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/app/products/products.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationFrontend/src/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restaurantapplication/RestaurantApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restaurantapplication/controller/EmployeeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restaurantapplication/controller/ProductController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restaurantapplication/controller/TableController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restaurantapplication/model/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restaurantapplication/model/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restaurantapplication/model/Table.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/restaurantapplication/repository/MockDataRestaurant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/restaurantapplication/RestaurantApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +35,7 @@
       <option name="presentableId" value="Default" />
       <updated>1634560870023</updated>
       <workItem from="1634560872284" duration="22000" />
+      <workItem from="1634722982720" duration="24000" />
     </task>
     <servers />
   </component>

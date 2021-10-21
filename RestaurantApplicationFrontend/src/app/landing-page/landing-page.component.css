@@ -1,0 +1,13 @@
+.btnEmployees {
+  font-size: 30px;
+  border-radius: 15px;
+  padding-block: 20px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.btnEmployees:hover {
+  background-color: #5897b1;
+  color: white;
+
+}
