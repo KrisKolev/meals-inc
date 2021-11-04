@@ -4,12 +4,13 @@
   padding-block: 20px 20px;
   background-color: white;
   transition: 0.3s;
-  position: relative;
-
 }
 
 .btnEmployees:hover {
   background-color: #5897b1;
   color: white;
+}
 
+mat-card {
+  justify-self: center;
 }
