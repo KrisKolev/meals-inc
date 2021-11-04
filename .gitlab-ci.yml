@@ -9,10 +9,13 @@ build:
     - ./gradlew build -x test
     - ./gradlew.bat --stop
 
-
 test:
   stage: test
   script:
     - cd RestaurantApplicationBackend;
     - ./gradlew test
     - ./gradlew.bat --stop
+
+after_script:
+  - echo "End CI"
+  - exit
