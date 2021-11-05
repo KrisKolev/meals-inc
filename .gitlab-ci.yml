@@ -17,5 +17,5 @@ test:
     - ./gradlew.bat --stop
 
 after_script:
-  - echo "DA"
+  - echo "please work"
   - exit
