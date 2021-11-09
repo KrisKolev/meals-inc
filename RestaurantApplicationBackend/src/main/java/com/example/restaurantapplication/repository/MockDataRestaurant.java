@@ -21,11 +21,11 @@ public class MockDataRestaurant
                 new Product(2, "Coca Cola", 3.50)
         ));
 
-        this.employeesList = new ArrayList<>(List.of(
-                new Employee(0, "Kris"),
-                new Employee(1, "Neyko"),
-                new Employee(2, "Petar")
-        ));
+//        this.employeesList = new ArrayList<>(List.of(
+//                new Employee(0, "Kris"),
+//                new Employee(1, "Neyko"),
+//                new Employee(2, "Petar")
+//        ));
 
         this.tablesList = new ArrayList<>(List.of(
                 new Table(0),

@@ -2,6 +2,8 @@ package com.example.restaurantapplication.controller;
 
 import com.example.restaurantapplication.model.Employee;
 import com.example.restaurantapplication.repository.MockDataRestaurant;
+import com.example.restaurantapplication.serviceInterfaces.IEmployeeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,12 +14,14 @@ import java.util.List;
 @RequestMapping("/employees")
 public class EmployeeController
 {
-    private static final MockDataRestaurant mockDataRestaurant = new MockDataRestaurant();
+
+    @Autowired
+    private IEmployeeService service;
 
     @GetMapping()
     public ResponseEntity<List<Employee>> GetAllEmployees()
     {
-        List<Employee> employees = mockDataRestaurant.GetEmployees();
+        List<Employee> employees = service.GetAllEmployees();
 
         if (employees != null)
         {
@@ -29,33 +33,41 @@ public class EmployeeController
         }
     }
 
-    @GetMapping("/id/{id}")
-    public ResponseEntity<Employee> GetEmployeeById(@PathVariable("id") int id)
+    @PostMapping
+    public ResponseEntity<Employee> CreateEmployee(@RequestBody Employee employee)
     {
-        Employee employee = mockDataRestaurant.GetEmployeeById(id);
+        service.AddEmployee(employee);
 
-        if (employee != null)
-        {
-            return ResponseEntity.ok().body(employee);
-        }
-        else
-        {
-            return ResponseEntity.notFound().build();
-        }
+        return ResponseEntity.ok().body(employee);
     }
 
-    @GetMapping("/name/{name}")
-    public ResponseEntity<List<Employee>> GetEmployeeByName(@PathVariable("name") String name)
-    {
-        List<Employee> employees = mockDataRestaurant.GetEmployeeByName(name);
-
-        if (employees != null)
-        {
-            return ResponseEntity.ok().body(employees);
-        }
-        else
-        {
-            return ResponseEntity.notFound().build();
-        }
-    }
+//    @GetMapping("/id/{id}")
+//    public ResponseEntity<Employee> GetEmployeeById(@PathVariable("id") int id)
+//    {
+//        Employee employee = mockDataRestaurant.GetEmployeeById(id);
+//
+//        if (employee != null)
+//        {
+//            return ResponseEntity.ok().body(employee);
+//        }
+//        else
+//        {
+//            return ResponseEntity.notFound().build();
+//        }
+//    }
+//
+//    @GetMapping("/name/{name}")
+//    public ResponseEntity<List<Employee>> GetEmployeeByName(@PathVariable("name") String name)
+//    {
+//        List<Employee> employees = mockDataRestaurant.GetEmployeeByName(name);
+//
+//        if (employees != null)
+//        {
+//            return ResponseEntity.ok().body(employees);
+//        }
+//        else
+//        {
+//            return ResponseEntity.notFound().build();
+//        }
+//    }
 }
