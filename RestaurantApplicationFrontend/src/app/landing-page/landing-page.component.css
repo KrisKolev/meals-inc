@@ -4,6 +4,7 @@
   padding-block: 20px 20px;
   background-color: white;
   transition: 0.3s;
+  margin-left: 50px;
 }
 
 .btnEmployees:hover {
@@ -12,7 +13,6 @@
 }
 
 .manageEmpl {
-
-  margin-block: 50px;
-  background-color: rgba(0,0,0,0.5);
+  max-width: 16rem;
+  background-color: rgba(0,0,0,0.3);
 }
