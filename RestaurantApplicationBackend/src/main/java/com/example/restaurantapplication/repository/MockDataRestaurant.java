@@ -15,11 +15,11 @@ public class MockDataRestaurant
 
     public MockDataRestaurant()
     {
-        this.productList = new ArrayList<>(List.of(
-                new Product(0, "Full English Breakfast", 15.00),
-                new Product(1, "Grilled Chicken", 13.50),
-                new Product(2, "Coca Cola", 3.50)
-        ));
+//        this.productList = new ArrayList<>(List.of(
+//                new Product(0, "Full English Breakfast", 15.00),
+//                new Product(1, "Grilled Chicken", 13.50),
+//                new Product(2, "Coca Cola", 3.50)
+//        ));
 
 //        this.employeesList = new ArrayList<>(List.of(
 //                new Employee(0, "Kris"),

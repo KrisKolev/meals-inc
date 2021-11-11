@@ -11,6 +11,8 @@
   color: white;
 }
 
-mat-card {
-  justify-self: center;
+.manageEmpl {
+
+  margin-block: 50px;
+  background-color: rgba(0,0,0,0.5);
 }
