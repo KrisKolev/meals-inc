@@ -36,6 +36,7 @@ import { ProductsService } from './products/products.service';
 import { TablesService } from './tables/tables.service';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     ProductsComponent,
     TablesComponent,
     LandingPageComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

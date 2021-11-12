@@ -1,3 +1,11 @@
+.manageEmpl {
+  position: relative;
+  max-width: 15vw;
+  background-color: rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+}
+
 .btnEmployees {
   font-size: 30px;
   border-radius: 15px;
@@ -6,14 +14,12 @@
   transition: 0.3s;
 }
 
-.manageEmpl {
-  max-width: 16.5rem;
-  background-color: rgba(0,0,0,0.3);
-  text-align: center;
-  margin-left: 50%;
-}
-
 .btnEmployees:hover {
   background-color: #5897b1;
   color: white;
+}
+
+.bigContainer {
+  padding-top: 13vw;
+  margin-left: 25vw;
 }

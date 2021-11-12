@@ -1,0 +1,10 @@
+* {
+  font-size: 50px;
+  color: white;
+}
+
+.message {
+  display: flex;
+  justify-content: center;
+  padding-top: 13vw;
+}
