@@ -4,15 +4,16 @@
   padding-block: 20px 20px;
   background-color: white;
   transition: 0.3s;
-  margin-left: 50px;
+}
+
+.manageEmpl {
+  max-width: 16.5rem;
+  background-color: rgba(0,0,0,0.3);
+  text-align: center;
+  margin-left: 50%;
 }
 
 .btnEmployees:hover {
   background-color: #5897b1;
   color: white;
-}
-
-.manageEmpl {
-  max-width: 16rem;
-  background-color: rgba(0,0,0,0.3);
 }
