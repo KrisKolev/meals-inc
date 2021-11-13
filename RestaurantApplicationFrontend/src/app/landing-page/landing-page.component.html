@@ -1,7 +1,26 @@
 <div class="bigContainer">
-<mat-card class="manageEmpl">
-    <button mat-button routerLink="employees" class="btnEmployees">
-      <span>Manage<br>Employees</span>
-    </button>
-</mat-card>
+    <mat-card class="manageEmpl">
+      <div class="btnEmployeesContainer">
+      <button mat-button routerLink="employees" class="btnEmployees">
+        <span>Manage<br>Employees</span>
+      </button>
+      </div>
+      <div class="asd"></div>
+
+        <mat-expansion-panel class="infoEmpl">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon>info</mat-icon>
+            </mat-panel-title>
+
+            <mat-panel-description class="descript">
+              Manage Employees Info
+            </mat-panel-description>
+
+          </mat-expansion-panel-header>
+          <p>You can click this button if you want to manage your employees (see all of them, delete, add more, ect.)</p>
+        </mat-expansion-panel>
+
+    </mat-card>
 </div>
+

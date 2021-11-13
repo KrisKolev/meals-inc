@@ -1,17 +1,23 @@
+.bigContainer {
+  padding-top: 13vw;
+  margin-left: 25vw;
+}
+
 .manageEmpl {
   position: relative;
   max-width: 15vw;
   background-color: rgba(0,0,0,0.3);
-  display: flex;
-  justify-content: center;
+  display: block;
+  border-radius: 15px;
 }
 
 .btnEmployees {
-  font-size: 30px;
+  font-size: 35px;
   border-radius: 15px;
   padding-block: 20px 20px;
   background-color: white;
   transition: 0.3s;
+  padding: 30px;
 }
 
 .btnEmployees:hover {
@@ -19,7 +25,24 @@
   color: white;
 }
 
-.bigContainer {
-  padding-top: 13vw;
-  margin-left: 25vw;
+.btnEmployeesContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.infoEmpl {
+  background-color: rgb(179, 179, 179);
+  transition: 0.3s;
+}
+
+.infoEmpl:hover {
+  background-color: #5897b1;
+}
+
+.descript {
+  color: black;
+}
+
+.asd {
+  padding: 20px;
 }
