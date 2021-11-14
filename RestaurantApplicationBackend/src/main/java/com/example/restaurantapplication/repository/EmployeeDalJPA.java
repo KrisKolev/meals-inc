@@ -16,10 +16,11 @@ public class EmployeeDalJPA implements IEmployeeDal
     public EmployeeDalJPA(IEmployeeRepository repo)
     {
         this.repo = repo;
-        repo.save(new Employee("Kris"));
-        repo.save(new Employee("Kris1"));
+        repo.save(new Employee("Kris", "Manager"));
+        repo.save(new Employee("Neyko", "Waiter"));
+        repo.save(new Employee("Petar", "Bartender"));
+        repo.save(new Employee("Zori", "Waitress"));
     }
-
 
     @Override
     public List<Employee> GetAllEmployees()

@@ -16,6 +16,9 @@ public class Employee
     @Column(name = "employeeName")
     @Getter private String employeeName;
 
+    @Column(name = "employeeRole")
+    @Getter private String employeeRole;
+
 
     //maybe can add inheritance for different types of employees (aka waiter, bartender)
 
@@ -23,8 +26,9 @@ public class Employee
 
     public Employee() { }
 
-    public Employee(String employeeName)
+    public Employee(String employeeName, String employeeRole)
     {
         this.employeeName = employeeName;
+        this.employeeRole = employeeRole;
     }
 }

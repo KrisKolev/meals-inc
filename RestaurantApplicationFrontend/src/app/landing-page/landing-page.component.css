@@ -1,6 +1,14 @@
 .bigContainer {
-  padding-top: 13vw;
+  float: left;
+  padding-top: 12vw;
   margin-left: 25vw;
+}
+
+.bigContainer1 {
+  padding-top: 12vw;
+  display: flex;
+  float: left;
+  margin-left: 5px;
 }
 
 .manageEmpl {

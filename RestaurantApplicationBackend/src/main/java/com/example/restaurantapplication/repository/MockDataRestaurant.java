@@ -22,9 +22,9 @@ public class MockDataRestaurant
         ));
 
         this.employeesList = new ArrayList<>(List.of(
-                new Employee("Kris"),
-                new Employee("Neyko"),
-                new Employee("Petar")
+                new Employee("Kris", "Manager"),
+                new Employee("Neyko", "Waiter"),
+                new Employee("Petar", "Bartender")
         ));
 
         this.tablesList = new ArrayList<>(List.of(

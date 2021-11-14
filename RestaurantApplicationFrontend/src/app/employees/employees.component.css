@@ -1,0 +1,32 @@
+.title {
+  font-size: 40px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding-top: 5vw;
+}
+
+table {
+  display: table;
+  width: 50vw;
+  border-radius: 10px;
+}
+
+.tableContainer {
+  padding: 30px;
+  max-width: 50vw;
+  width: 50vw;
+  display: flex;
+  margin-left: 22vw;
+}
+
+.tabl {
+  width: 50vw;
+  max-width: 50vw;
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+
+.mat-column-action {
+  text-align: right;
+}
