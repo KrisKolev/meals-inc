@@ -82,12 +82,7 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     MatMenuModule,
     MatNativeDateModule,
     RouterModule.forRoot([
-      /*      {path: 'cinemas-page', component: CinemasPageComponent},
-            {path: 'covid-page', component: CovidPageComponent},
-            {path: 'offers-page', component: OffersPageComponent},
-            {path: 'landing-page', component: LandingPageComponent},
-            {path: 'login-page', component: LoginPageComponent},
-            {path: 'program-page', component: ProgramPageComponent},*/
+
     ]),
     MatExpansionModule,
     MatTableModule,

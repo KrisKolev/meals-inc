@@ -20,6 +20,8 @@ public class EmployeeDalJPA implements IEmployeeDal
         repo.save(new Employee("Neyko", "Waiter"));
         repo.save(new Employee("Petar", "Bartender"));
         repo.save(new Employee("Zori", "Waitress"));
+        repo.save(new Employee("Misha", "Bartender"));
+        repo.save(new Employee("Presli", "Waitress"));
     }
 
     @Override
