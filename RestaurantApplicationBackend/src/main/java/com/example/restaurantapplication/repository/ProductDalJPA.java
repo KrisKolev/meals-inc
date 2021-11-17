@@ -16,9 +16,9 @@ public class ProductDalJPA implements IProductDal
     public ProductDalJPA(IProductRepository repo)
     {
         this.repo = repo;
-        repo.save(new Product("Full Chicken Breakfast", 15.00));
-        repo.save(new Product("Grilled Chicken", 13.50));
-        repo.save(new Product("Coca-Cola", 3.50));
+//        repo.save(new Product("Full Chicken Breakfast", 15.00));
+//        repo.save(new Product("Grilled Chicken", 13.50));
+//        repo.save(new Product("Coca-Cola", 3.50));
     }
 
 
