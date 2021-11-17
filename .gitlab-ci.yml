@@ -28,6 +28,7 @@ sonarqube-check:
   script: 
     - cd RestaurantApplicationBackend
     - gradle sonarqube
+    - exit
   allow_failure: true
   only:
     - main # or the name of your main branch
