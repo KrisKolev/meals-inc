@@ -1,12 +1,16 @@
 Personal Plan (starting 6th November)
 
 1. I know where the issue with the CI is. I know why it accurs and how to fix it.
-But because the solution is kind of risky I do not want to break my application and submit something that does not work.
+But because the solution is kind of risky I do not want to break my application and submit something that does not work.(Done)
 
-2. My next step is to improve the backend with POST func. and immediately after that configure the database.
+2. My next step is to improve the backend with POST func. and immediately after that configure the database.(Done)
 
-3. After that I will make unit tests.
+3. JWT
 
-4. Then I move on to the most important feature of the application (managing orders) and focusing on it
+4. Sonarqube
+
+5. Unit tests.
+
+6. Then I move on to the most important feature of the application (managing orders) and focusing on it
 for as long as possible.
 

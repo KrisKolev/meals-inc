@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
+import {AfterContentInit, AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import { EmployeesService } from "./employees.service";
 import {MatPaginator} from "@angular/material/paginator";
 import {MatSort} from "@angular/material/sort";
@@ -15,7 +15,7 @@ export class EmployeesComponent implements AfterViewInit {
   displayedColumns: string[] = ['position', 'name', 'role', 'action'];
   dataSource: MatTableDataSource<Employees>;
 
-  //@ViewChild(MatPaginator) paginator: MatPaginator;
+  // @ViewChild(MatPaginator) paginator: MatPaginator;
 
   title = "Employees";
 
@@ -29,10 +29,10 @@ export class EmployeesComponent implements AfterViewInit {
   }
 
   ngOnInit(): void {
-
+    // this.dataSource.paginator = this.paginator;
   }
 
   ngAfterViewInit() {
-    //this.dataSource.paginator = this.paginator;
+    // this.dataSource.paginator = this.paginator;
   }
 }
