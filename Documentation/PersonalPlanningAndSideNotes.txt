@@ -1,6 +1,7 @@
 Personal Plan
 
 
+
 1. I know where the issue with the CI is. I know why it accurs and how to fix it.
 But because the solution is kind of risky I do not want to break my application and submit something that does not work.(Done)
 
