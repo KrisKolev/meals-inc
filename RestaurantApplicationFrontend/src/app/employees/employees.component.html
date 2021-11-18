@@ -10,6 +10,7 @@
   <mat-tab label="Overview">
     <div class="tableContainer">
       <mat-card class="tabl">
+
         <table mat-table [dataSource]="employees">
           <ng-container matColumnDef="position">
             <th mat-header-cell *matHeaderCellDef> ID </th>
@@ -50,39 +51,32 @@
   <mat-tab label="Manage">
     <div class="tableContainer">
       <mat-card class="tabl">
-        <table mat-table [dataSource]="employees">
-          <ng-container matColumnDef="position">
-            <th mat-header-cell *matHeaderCellDef> ID </th>
-            <td mat-cell *matCellDef="let employee"> {{ employee.employeeId }} </td>
-          </ng-container>
+        <mat-card>
 
-          <ng-container matColumnDef="name">
-            <th mat-header-cell *matHeaderCellDef> Name </th>
-            <td mat-cell *matCellDef="let employee"> {{ employee.employeeName }} </td>
-          </ng-container>
+          <div class="add">
+            <p>Add Employees</p>
+          </div>
 
-          <ng-container matColumnDef="role">
-            <th mat-header-cell *matHeaderCellDef> Role </th>
-            <td mat-cell *matCellDef="let employee"> {{ employee.employeeRole }} </td>
-          </ng-container>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Employee First Name</mat-label>
+            <input matInput placeholder="Ex. John">
+          </mat-form-field>
 
-          <ng-container matColumnDef="action">
-            <th mat-header-cell *matHeaderCellDef> Action </th>
-            <td mat-cell *matCellDef="let employee">
-              <button mat-icon-button color="warn">
-                <mat-icon>delete</mat-icon>
-              </button>
-            </td>
-          </ng-container>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Employee Last Name</mat-label>
+            <input matInput placeholder="Ex. Doe">
+          </mat-form-field>
 
-          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-        </table>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Employee Role</mat-label>
+            <input matInput placeholder="Ex. Waiter">
+          </mat-form-field>
+          <br>
+          <button mat-fab class = "add-icon" aria-label="Add icon" color="basic">
+            <mat-icon><b>add</b></mat-icon>
+          </button>
 
-        <mat-paginator [pageSizeOptions]="[5, 10, 20]"
-                       showFirstLastButtons
-                       aria-label="Select page">
-        </mat-paginator>
+        </mat-card>
       </mat-card>
     </div>
   </mat-tab>

@@ -4,7 +4,6 @@
   display: flex;
   justify-content: center;
   padding-top: 5vw;
-  transition: 0.3s;
 }
 
 table {
@@ -18,7 +17,7 @@ table {
   max-width: 50vw;
   width: 50vw;
   display: flex;
-  margin-left: 22vw;
+  margin-left: 23vw;
 }
 
 .tabl {
@@ -41,4 +40,35 @@ table {
 
 .asd2 {
   padding: 15px;
+}
+
+.example-full-width {
+  width: 60%;
+  margin-left: 20%;
+  padding: 10px;
+}
+
+.add {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  transition: 0.2s;
+}
+
+.add:hover {
+  font-size: 35px;
+  padding: 10px;
+}
+
+.add-icon {
+  margin-left: 22.3vw;
+  background-color: #325a68;
+  color: white;
+  transition: 0.3s;
+}
+
+.add-icon:hover {
+  background-color: #5897b1;
+  color: black;
 }
