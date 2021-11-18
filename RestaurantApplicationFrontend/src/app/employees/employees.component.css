@@ -31,3 +31,14 @@ table {
 .mat-column-action {
   text-align: right;
 }
+
+::ng-deep .mat-tab-label {
+  font-size: 20px;
+  color: white;
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+
+.asd2 {
+  padding: 15px;
+}

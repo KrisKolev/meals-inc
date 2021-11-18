@@ -5,9 +5,9 @@ But because the solution is kind of risky I do not want to break my application 
 
 2. My next step is to improve the backend with POST func. and immediately after that configure the database.(Done)
 
-3. JWT
+3. Sonarqube (Done)
 
-4. Sonarqube
+4. JWT
 
 5. Unit tests.
 
