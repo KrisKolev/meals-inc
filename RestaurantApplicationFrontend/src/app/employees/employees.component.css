@@ -71,4 +71,5 @@ table {
 .add-icon:hover {
   background-color: #5897b1;
   color: black;
+  transform: rotate(90deg);
 }
