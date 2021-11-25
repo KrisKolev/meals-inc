@@ -16,12 +16,13 @@ public class EmployeeDalJPA implements IEmployeeDal
     public EmployeeDalJPA(IEmployeeRepository repo)
     {
         this.repo = repo;
-//        repo.save(new Employee("Kris", "Manager"));
-//        repo.save(new Employee("Neyko", "Waiter"));
-//        repo.save(new Employee("Petar", "Bartender"));
-//        repo.save(new Employee("Zori", "Waitress"));
-//        repo.save(new Employee("Misha", "Bartender"));
-//        repo.save(new Employee("Presli", "Waitress"));
+//        repo.save(new Employee("Kris", "Manager", "kris1", "admin"));
+//        repo.save(new Employee("Neyko", "Waiter", "neyko1", "1234"));
+//        repo.save(new Employee("Petar", "Bartender", "petar1", "1234"));
+//        repo.save(new Employee("Zori", "Waitress", "zori1", "1234"));
+//        repo.save(new Employee("Misha", "Bartender", "misha1", "1234"));
+//        repo.save(new Employee("Presli", "Waitress", "presli1", "1234"));
+//        repo.save(new Employee("Dobri", "Genral", "dobri1", "admin"));
     }
 
     @Override
@@ -35,4 +36,11 @@ public class EmployeeDalJPA implements IEmployeeDal
     {
         repo.save(employee);
     }
+
+    @Override
+    public Employee saveAndFlush(Employee employee)
+    {
+        return repo.saveAndFlush(employee);
+    }
+
 }

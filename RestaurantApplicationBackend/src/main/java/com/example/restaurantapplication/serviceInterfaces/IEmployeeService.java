@@ -8,4 +8,5 @@ public interface IEmployeeService
 {
     List<Employee> GetAllEmployees();
     void AddEmployee(Employee employee);
+    Employee saveAndFlush(Employee employee);
 }

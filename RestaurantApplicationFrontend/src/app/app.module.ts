@@ -41,6 +41,7 @@ import {MatExpansionModule} from "@angular/material/expansion";
 import {MatTableModule} from "@angular/material/table";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatTabsModule} from "@angular/material/tabs";
+import {MatSortModule} from "@angular/material/sort";
 
 @NgModule({
   declarations: [
@@ -87,6 +88,7 @@ import {MatTabsModule} from "@angular/material/tabs";
         MatTableModule,
         MatPaginatorModule,
         MatTabsModule,
+        MatSortModule,
     ],
   providers: [
     EmployeesService,

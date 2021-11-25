@@ -30,4 +30,10 @@ public class EmployeeService implements IEmployeeService
     {
         dal.AddEmployee(employee);
     }
+
+    @Override
+    public Employee saveAndFlush(Employee employee)
+    {
+        return dal.saveAndFlush(employee);
+    }
 }

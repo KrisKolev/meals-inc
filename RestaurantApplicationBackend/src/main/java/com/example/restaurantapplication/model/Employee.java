@@ -7,9 +7,10 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import javax.persistence.Table;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "employee")
@@ -25,14 +26,49 @@ public class Employee
     @Column(name = "employeeRole")
     private String employeeRole;
 
+    @Column(name = "employeeUsername", unique = true)
+    private String employeeUsername;
 
-    //maybe can add inheritance for different types of employees (aka waiter, bartender)
+    @Column
+    private String employeePassword;
 
     //in future will be added a list of tables for each employe
 
-    public Employee(String employeeName, String employeeRole)
+    public Employee(String employeeName, String employeeRole, String employeeUsername, String employeePassword)
     {
         this.employeeName = employeeName;
         this.employeeRole = employeeRole;
+        this.employeeUsername = employeeUsername;
+        this.employeePassword = employeePassword;
+    }
+
+    public int getEmployeeId()
+    {
+        return employeeId;
+    }
+
+    public String getEmployeeName()
+    {
+        return employeeName;
+    }
+
+    public String getEmployeeRole()
+    {
+        return employeeRole;
+    }
+
+    public String getEmployeeUsername()
+    {
+        return employeeUsername;
+    }
+
+    public void setEmployeePassword(String employeePassword)
+    {
+        this.employeePassword = employeePassword;
+    }
+
+    public String getEmployeePassword()
+    {
+        return employeePassword;
     }
 }
