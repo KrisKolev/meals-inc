@@ -1,3 +1,4 @@
+
 import {AfterViewInit, Component, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
 import {EmployeesService} from "./employees.service";
 import {MatPaginator} from "@angular/material/paginator";
@@ -15,8 +16,6 @@ export class EmployeesComponent implements AfterViewInit {
   displayedColumns: string[] = ['id', 'name', 'role', 'action'];
   dataSource: MatTableDataSource<Employees>;
 
-
-
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
@@ -30,23 +29,24 @@ export class EmployeesComponent implements AfterViewInit {
       this.dataSource = this.employees;
       //console.log('employees', this.employees, 'ds', this.dataSource);
     });
-
   }
 
   ngOnInit(): void {
-    // this.dataSource.paginator = this.paginator;
+
   }
 
   ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-    // this.dataSource.sort = this.sort;
+    // this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-    if (this.dataSource.paginator) {
-      this.paginator.firstPage();
-    }
-  }
+  // TODO: Implement this filtering function
+
+  // applyFilter(event: Event) {
+  //   const filterValue = (event.target as HTMLInputElement).value;
+  //   this.dataSource.filter = filterValue.trim().toLowerCase();
+  //   if (this.dataSource.paginator) {
+  //     this.paginator.firstPage();
+  //   }
+  // }
 }

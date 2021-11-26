@@ -1,5 +1,6 @@
 package com.example.restaurantapplication.controller;
 
+import com.example.restaurantapplication.dto.EmployeeDTO;
 import com.example.restaurantapplication.model.Employee;
 import com.example.restaurantapplication.repository.MockDataRestaurant;
 import com.example.restaurantapplication.serviceInterfaces.IEmployeeService;
@@ -24,10 +25,9 @@ public class EmployeeController
     private IEmployeeService service;
 
     @GetMapping()
-    public ResponseEntity<List<Employee>> GetAllEmployees()
+    public ResponseEntity<List<EmployeeDTO>> GetAllEmployees()
     {
-        JSONArray arr = new JSONArray();
-        List<Employee> employees = service.GetAllEmployees();
+        List<EmployeeDTO> employees = service.GetAllEmployees();
 
         if (employees != null)
         {
@@ -58,6 +58,14 @@ public class EmployeeController
         {
             return new ResponseEntity<String>(jsonObject.toString(), HttpStatus.UNAUTHORIZED);
         }
+    }
+
+    @DeleteMapping
+    public ResponseEntity<Employee> DeleteEmployee(@RequestBody Employee employee)
+    {
+        service.deleteEmployee(employee);
+
+        return ResponseEntity.ok().body(employee);
     }
 
 //    @GetMapping("/id/{id}")

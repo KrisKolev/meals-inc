@@ -1,3 +1,4 @@
+<app-toolbar></app-toolbar>
 
 <link rel="stylesheet" href="employees.component.css">
 <div class="title">
@@ -41,16 +42,13 @@
           <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
 
-        <!--<table>
-          <tr *ngFor="let employee of employees;">
-            <td> {{ employee.employeeName }} </td>
-          </tr>
-        </table>-->
-
+        <!--
         <mat-paginator [pageSizeOptions]="[5]"
                        showFirstLastButtons
                        aria-label="Select page">
         </mat-paginator>
+        -->
+
       </mat-card>
     </div>
   </mat-tab>
@@ -65,13 +63,18 @@
           </div>
 
           <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Employee First Name</mat-label>
+            <mat-label>Employee Name</mat-label>
             <input matInput placeholder="Ex. John">
           </mat-form-field>
 
           <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Employee Role</mat-label>
             <input matInput placeholder="Ex. Waiter">
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Employee Username</mat-label>
+            <input matInput placeholder="Ex. Kris28">
           </mat-form-field>
 
           <mat-form-field class="example-full-width" appearance="fill">

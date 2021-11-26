@@ -23,17 +23,10 @@
 
 .info-icon {
   transition: 0.3s;
+  margin-right: 10px;
 }
 
 .info-icon:hover {
-  color: white;
-}
-
-.share-icon {
-  transition: 0.3s;
-}
-
-.share-icon:hover {
   color: white;
 }
 
@@ -43,4 +36,9 @@
   bottom: 0px;
   background-color: white;
   font-size: 17px;
+}
+
+.logout-icon:hover {
+  background-color: #325a68;
+  color: white;
 }

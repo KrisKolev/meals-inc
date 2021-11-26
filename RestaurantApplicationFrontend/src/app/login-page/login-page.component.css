@@ -1,0 +1,71 @@
+
+.name {
+  display: flex;
+  justify-content: center;
+  flex: auto;
+  font-size: 70px;
+  transition: 0.3s;
+}
+
+.toolbar {
+  background-color: #5897b1;
+  padding-block: 70px;
+}
+
+.footer {
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+  font-size: 17px;
+}
+
+.login {
+  width: 50vw;
+  max-width: 50vw;
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+
+.loginContainer {
+  padding-top: 150px;
+  width: 50vw;
+  display: flex;
+  margin-left: 24vw;
+}
+
+.loginContainer {
+  max-width: 50vw;
+}
+
+.example-full-width {
+  width: 60%;
+  margin-left: 20%;
+  padding: 3px;
+  border-radius: 10px;
+}
+
+.login-icon {
+  margin-left: 22.3vw;
+  background-color: #5897b1;
+  color: black;
+  transition: 0.3s;
+}
+
+.login-icon:hover {
+  background-color: #325a68;
+  color: white;
+}
+
+.loginText {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  transition: 0.2s;
+}
+
+.loginText:hover {
+  font-size: 35px;
+  padding: 10px;
+}

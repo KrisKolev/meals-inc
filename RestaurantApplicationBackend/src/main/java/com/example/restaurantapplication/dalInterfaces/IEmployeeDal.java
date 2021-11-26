@@ -8,5 +8,6 @@ public interface IEmployeeDal
 {
     List<Employee> GetAllEmployees();
     void AddEmployee(Employee employee);
+    void deleteEmployee(Employee employee);
     Employee saveAndFlush(Employee employee);
 }

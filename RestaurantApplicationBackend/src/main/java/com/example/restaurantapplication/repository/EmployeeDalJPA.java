@@ -22,7 +22,7 @@ public class EmployeeDalJPA implements IEmployeeDal
 //        repo.save(new Employee("Zori", "Waitress", "zori1", "1234"));
 //        repo.save(new Employee("Misha", "Bartender", "misha1", "1234"));
 //        repo.save(new Employee("Presli", "Waitress", "presli1", "1234"));
-//        repo.save(new Employee("Dobri", "Genral", "dobri1", "admin"));
+//        repo.save(new Employee("Dobri", "General", "dobri1", "admin"));
     }
 
     @Override
@@ -35,6 +35,12 @@ public class EmployeeDalJPA implements IEmployeeDal
     public void AddEmployee(Employee employee)
     {
         repo.save(employee);
+    }
+
+    @Override
+    public void deleteEmployee(Employee employee)
+    {
+        repo.delete(employee);
     }
 
     @Override

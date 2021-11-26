@@ -1,14 +1,14 @@
 <p>
   <mat-toolbar class="toolbar" color="basic">
-    <button mat-fab routerLink="" class = "home-icon" aria-label="Home icon" color="basic">
+    <button mat-fab routerLink="/landing" class = "home-icon" aria-label="Home icon" color="basic">
       <mat-icon>home</mat-icon>
     </button>
     <span class = "name"> Meals INC. </span>
-    <button mat-icon-button class="info-icon" aria-label="Info icon">
+    <button mat-icon-button class="info-icon" aria-label="Info icon" (click)="openThisDialog()">
       <mat-icon>info</mat-icon>
     </button>
-    <button mat-icon-button class="share-icon" aria-label="Share icon">
-      <mat-icon>share</mat-icon>
+    <button mat-fab routerLink="" class = "logout-icon" aria-label="Logout icon" color="basic">
+      <mat-icon>logout</mat-icon>
     </button>
   </mat-toolbar>
 </p>

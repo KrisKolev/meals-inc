@@ -1,4 +1,6 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {MatDialog} from "@angular/material/dialog";
+import {InfoDialogComponent} from "../info-dialog/info-dialog.component";
 
 @Component({
   selector: 'app-toolbar',
@@ -7,9 +9,12 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
+
+  openThisDialog() {
+    this.dialog.open(InfoDialogComponent);
+  }
 
   ngOnInit(): void {
   }
-
 }

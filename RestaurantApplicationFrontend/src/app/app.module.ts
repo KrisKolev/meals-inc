@@ -42,6 +42,8 @@ import {MatTableModule} from "@angular/material/table";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatTabsModule} from "@angular/material/tabs";
 import {MatSortModule} from "@angular/material/sort";
+import { LoginPageComponent } from './login-page/login-page.component';
+import { InfoDialogComponent } from './info-dialog/info-dialog.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,9 @@ import {MatSortModule} from "@angular/material/sort";
     TablesComponent,
     LandingPageComponent,
     ToolbarComponent,
-    ErrorComponent
+    ErrorComponent,
+    LoginPageComponent,
+    InfoDialogComponent
   ],
     imports: [
         BrowserModule,
