@@ -9,4 +9,5 @@ public class EmployeeDTO
     private String employeeName;
     private String employeeRole;
     private String employeeUsername;
+    private String employeePassword;
 }

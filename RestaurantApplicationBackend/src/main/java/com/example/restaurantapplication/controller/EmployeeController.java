@@ -42,10 +42,6 @@ public class EmployeeController
     @PostMapping
     public ResponseEntity<String> CreateEmployee(@RequestBody Employee employee)
     {
-//        service.AddEmployee(employee);
-//
-//        return ResponseEntity.ok().body(employee);
-
         JSONObject jsonObject = new JSONObject();
 
         try

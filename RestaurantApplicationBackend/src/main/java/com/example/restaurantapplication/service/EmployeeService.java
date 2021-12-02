@@ -7,6 +7,7 @@ import com.example.restaurantapplication.serviceInterfaces.IEmployeeService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -56,4 +57,10 @@ public class EmployeeService implements IEmployeeService
         EmployeeDTO employeeDTO = modelMapper.map(employee, EmployeeDTO.class);
         return employeeDTO;
     }
+
+//    @Transactional(rollbackFor = Exception.class)
+//    public String saveDTO(EmployeeDTO employeeDTO)
+//    {
+//        employeeDTO.set
+//    }
 }

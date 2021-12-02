@@ -20,13 +20,13 @@ public class Employee
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int employeeId;
 
-    @Column(name = "employeeName")
+    @Column(name = "employeeName", nullable = false)
     private String employeeName;
 
-    @Column(name = "employeeRole")
+    @Column(name = "employeeRole", nullable = false)
     private String employeeRole;
 
-    @Column(name = "employeeUsername", unique = true)
+    @Column(name = "employeeUsername",nullable = false, unique = true)
     private String employeeUsername;
 
     @Column
@@ -62,7 +62,7 @@ public class Employee
         return employeeUsername;
     }
 
-    public void setEmployeePassword(String employeePassword)
+    public void setPassword(String employeePassword)
     {
         this.employeePassword = employeePassword;
     }

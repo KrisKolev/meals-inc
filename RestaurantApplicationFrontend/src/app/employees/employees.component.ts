@@ -27,7 +27,6 @@ export class EmployeesComponent implements AfterViewInit {
     this.employees = service.getEmployees().subscribe((res) => {
       this.employees = res;
       this.dataSource = this.employees;
-      //console.log('employees', this.employees, 'ds', this.dataSource);
     });
   }
 

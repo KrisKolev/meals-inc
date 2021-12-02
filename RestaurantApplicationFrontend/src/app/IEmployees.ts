@@ -5,5 +5,4 @@ export interface Employees {
     employeeRole: string;
     employeeUsername: string;
     employeePassword: string;
-
 }

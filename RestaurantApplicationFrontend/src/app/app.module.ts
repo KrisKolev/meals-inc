@@ -44,6 +44,7 @@ import {MatTabsModule} from "@angular/material/tabs";
 import {MatSortModule} from "@angular/material/sort";
 import { LoginPageComponent } from './login-page/login-page.component';
 import { InfoDialogComponent } from './info-dialog/info-dialog.component';
+import axios from "axios";
 
 @NgModule({
   declarations: [
