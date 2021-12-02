@@ -17,8 +17,6 @@ export class LoginPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-
   getLogin(employeeUsername: string, employeePassword: string) {
     axios.post(
       'http://localhost:8080/employees',
@@ -31,7 +29,4 @@ export class LoginPageComponent implements OnInit {
       alert(res.data);
     })
   }
-
-
-
 }
