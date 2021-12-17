@@ -5,6 +5,7 @@ import {MatPaginator} from "@angular/material/paginator";
 import {MatTableDataSource} from "@angular/material/table";
 import {Employees} from "../IEmployees";
 import {MatSort} from "@angular/material/sort";
+import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'app-employees',
@@ -12,6 +13,9 @@ import {MatSort} from "@angular/material/sort";
   styleUrls: ['./employees.component.css']
 })
 export class EmployeesComponent implements AfterViewInit {
+
+  hidePassword = true;
+  pw = new FormControl('');
 
   displayedColumns: string[] = ['id', 'name', 'role', 'action'];
   dataSource: MatTableDataSource<Employees>;
@@ -39,7 +43,7 @@ export class EmployeesComponent implements AfterViewInit {
     this.dataSource.sort = this.sort;
   }
 
-  // TODO: Implement this filtering function
+  // TODO: Implement this search function
 
   // applyFilter(event: Event) {
   //   const filterValue = (event.target as HTMLInputElement).value;

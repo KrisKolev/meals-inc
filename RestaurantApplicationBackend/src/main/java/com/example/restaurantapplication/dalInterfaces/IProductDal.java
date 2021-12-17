@@ -8,4 +8,6 @@ public interface IProductDal
 {
     List<Product> GetAllProducts();
     void AddProduct(Product product);
+    Product saveAndFlush(Product product);
+    Product getById(Integer id);
 }

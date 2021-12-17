@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {LoginPageService} from "./login-page.service";
 import axios from "axios";
+import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'app-login-page',
@@ -8,6 +9,9 @@ import axios from "axios";
   styleUrls: ['./login-page.component.css']
 })
 export class LoginPageComponent implements OnInit {
+
+  hidePassword = true;
+  pw = new FormControl('');
 
   constructor() {
     employeeUsername: "";

@@ -4,15 +4,17 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import com.example.restaurantapplication.model.Table;
+import org.codehaus.jackson.annotate.JsonIgnore;
 
 import javax.persistence.*;
-import javax.persistence.Table;
+import java.util.List;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "product")
+@javax.persistence.Table(name = "product")
 public class Product
 {
     @Id
@@ -24,6 +26,14 @@ public class Product
 
     @Column(name = "productPrice")
     private double productPrice;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "product_place",
+            joinColumns = { @JoinColumn(name = "product_productid") },
+            inverseJoinColumns = { @JoinColumn(name = "place_placeid") }
+    )
+    @JsonIgnore
+    private List<Table> place;
 
     public Product(String productName, double productPrice)
     {

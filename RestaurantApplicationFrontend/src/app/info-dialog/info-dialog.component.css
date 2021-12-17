@@ -18,3 +18,7 @@
   background-color: #325a68;
   color: white;
 }
+
+.btn {
+  justify-content: right;
+}

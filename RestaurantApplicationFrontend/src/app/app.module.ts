@@ -45,6 +45,7 @@ import {MatSortModule} from "@angular/material/sort";
 import { LoginPageComponent } from './login-page/login-page.component';
 import { InfoDialogComponent } from './info-dialog/info-dialog.component';
 import axios from "axios";
+import { OrdersPageComponent } from './orders-page/orders-page.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import axios from "axios";
     ToolbarComponent,
     ErrorComponent,
     LoginPageComponent,
-    InfoDialogComponent
+    InfoDialogComponent,
+    OrdersPageComponent
   ],
     imports: [
         BrowserModule,

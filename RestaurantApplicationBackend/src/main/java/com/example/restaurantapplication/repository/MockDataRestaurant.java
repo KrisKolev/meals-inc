@@ -28,9 +28,9 @@ public class MockDataRestaurant
         ));
 
         this.tablesList = new ArrayList<>(List.of(
-                new Table(0),
-                new Table(1),
-                new Table(2)
+                new Table("1"),
+                new Table("2"),
+                new Table("3")
         ));
     }
 

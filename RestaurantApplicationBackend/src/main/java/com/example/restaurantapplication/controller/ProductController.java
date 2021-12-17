@@ -1,10 +1,16 @@
 package com.example.restaurantapplication.controller;
 
+import com.example.restaurantapplication.dto.ProductDTO;
 import com.example.restaurantapplication.model.Product;
 import com.example.restaurantapplication.repository.MockDataRestaurant;
 import com.example.restaurantapplication.serviceInterfaces.IEmployeeService;
 import com.example.restaurantapplication.serviceInterfaces.IProductService;
+import com.example.restaurantapplication.serviceInterfaces.ITableService;
+import org.codehaus.jettison.json.JSONException;
+import org.codehaus.jettison.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,9 +26,9 @@ public class ProductController
     private IProductService service;
 
     @GetMapping()
-    public ResponseEntity<List<Product>> GetAllProducts()
+    public ResponseEntity<List<ProductDTO>> GetAllProducts()
     {
-        List<Product> products = service.GetAllProducts();
+        List<ProductDTO> products = service.GetAllProducts();
         if (products != null)
         {
             return ResponseEntity.ok().body(products);
@@ -34,11 +40,20 @@ public class ProductController
     }
 
     @PostMapping
-    public ResponseEntity<Product> CreateProduct(@RequestBody Product product)
+    public ResponseEntity<String> CreateProduct(@RequestBody Product product)
     {
-        service.AddProduct(product);
+        JSONObject jsonObject = new JSONObject();
 
-        return ResponseEntity.ok().body(product);
+        try
+        {
+            Product temp = service.saveAndFlush(product);
+            jsonObject.put("message", temp.getProductName() + " saved successfully");
+            return new ResponseEntity<String>(jsonObject.toString(), HttpStatus.OK);
+        }
+        catch (JSONException e)
+        {
+            return new ResponseEntity<String>(jsonObject.toString(), HttpStatus.UNAUTHORIZED);
+        }
     }
 
 //    private static final MockDataRestaurant mockDataRestaurant = new MockDataRestaurant();

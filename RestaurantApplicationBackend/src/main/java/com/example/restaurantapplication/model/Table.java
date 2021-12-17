@@ -1,21 +1,45 @@
 package com.example.restaurantapplication.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import org.codehaus.jackson.annotate.JsonIgnore;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+@javax.persistence.Table(name = "place")
 public class Table
 {
-    @Getter private int tableId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int tableId;
 
-    private List<Product> products;
+    @Column(name = "tableName", nullable = false)
+    private String tableName;
 
-    // in future will be added a list of Product objects for each table
+    @ManyToMany(mappedBy = "place")
+    @JsonIgnore
+    List<Product> products;
 
-    public Table(int tableId)
+    public Table(String tableName)
     {
-        products = new ArrayList<>();
-        this.tableId = tableId;
+        this.tableName = tableName;
+    }
+
+    public int getTableId()
+    {
+        return tableId;
+    }
+
+    public String getTableName()
+    {
+        return tableName;
     }
 }

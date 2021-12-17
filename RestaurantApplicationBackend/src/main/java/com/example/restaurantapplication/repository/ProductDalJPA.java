@@ -33,4 +33,16 @@ public class ProductDalJPA implements IProductDal
     {
         repo.save(product);
     }
+
+    @Override
+    public Product saveAndFlush(Product product)
+    {
+        return repo.saveAndFlush(product);
+    }
+
+    @Override
+    public Product getById(Integer id)
+    {
+        return repo.getById(id);
+    }
 }
