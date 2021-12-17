@@ -74,7 +74,7 @@ public class TableController
 
         table.setProducts(productList);
         service.saveAndFlush(table);
-        return new ResponseEntity<>("hui",HttpStatus.OK);
+        return new ResponseEntity<>("blah",HttpStatus.OK);
     }
 
     @DeleteMapping

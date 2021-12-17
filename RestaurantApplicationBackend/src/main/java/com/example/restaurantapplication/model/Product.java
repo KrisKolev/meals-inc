@@ -29,8 +29,8 @@ public class Product
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "product_place",
-            joinColumns = { @JoinColumn(name = "product_productid") },
-            inverseJoinColumns = { @JoinColumn(name = "place_placeid") }
+            joinColumns = { @JoinColumn(name = "productid") },
+            inverseJoinColumns = { @JoinColumn(name = "place_id") }
     )
     @JsonIgnore
     private List<Table> place;
