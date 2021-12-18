@@ -52,6 +52,12 @@ public class ProducService implements IProductService
         return dal.getById(id);
     }
 
+    @Override
+    public void deleteProduct(Product product)
+    {
+        dal.deleteProduct(product);
+    }
+
     private ProductDTO ConvertDTO(Product product)
     {
         ProductDTO productDTO = modelMapper.map(product, ProductDTO.class);

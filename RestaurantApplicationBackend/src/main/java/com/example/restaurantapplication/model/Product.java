@@ -21,10 +21,10 @@ public class Product
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int productID;
 
-    @Column(name = "productName")
+    @Column(name = "productName", nullable = false)
     private String productName;
 
-    @Column(name = "productPrice")
+    @Column(name = "productPrice", nullable = false)
     private double productPrice;
 
     @ManyToMany(cascade = CascadeType.ALL)

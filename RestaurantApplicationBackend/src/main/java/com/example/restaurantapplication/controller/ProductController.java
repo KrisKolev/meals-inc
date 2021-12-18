@@ -56,6 +56,14 @@ public class ProductController
         }
     }
 
+    @DeleteMapping
+    public ResponseEntity<Product> DeleteProduct(@RequestBody Product product)
+    {
+        service.deleteProduct(product);
+
+        return ResponseEntity.ok().body(product);
+    }
+
 //    private static final MockDataRestaurant mockDataRestaurant = new MockDataRestaurant();
 
 //    @GetMapping("/id/{id}")
