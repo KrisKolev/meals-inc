@@ -34,27 +34,26 @@ class RestaurantApplicationTests
         Assertions.assertEquals(mockDataRestaurant.GetEmployees().size(), 3 );
     }
 
-    @Test
-    public void createEmployeeTest()
-    {
-        Employee empl = getValidEmployee();
-
-        ResponseEntity response = _eContr.CreateEmployee(empl);
-
-        assert(!response.getStatusCode().isError());
-
-    }
-
-    private Employee getValidEmployee()
-    {
-        Employee employee = new Employee();
-        employee.setEmployeeName("Name");
-        employee.setEmployeeRole("Role");
-        employee.setEmployeeUsername("username1");
-        employee.setEmployeePassword("password");
-
-        return employee;
-    }
+//    @Test
+//    public void createEmployeeTest()
+//    {
+//        Employee empl = getValidEmployee();
+//
+//        ResponseEntity response = _eContr.CreateEmployee(empl);
+//
+//        assert(response.getStatusCode().is2xxSuccessful());
+//    }
+//
+//    private Employee getValidEmployee()
+//    {
+//        Employee employee = new Employee();
+//        employee.setEmployeeName("Name");
+//        employee.setEmployeeRole("Role");
+//        employee.setEmployeeUsername("username1");
+//        employee.setEmployeePassword("password");
+//
+//        return employee;
+//    }
 
     @Test
     public void GetProductsTest()

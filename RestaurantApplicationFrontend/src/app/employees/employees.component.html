@@ -13,26 +13,33 @@
     <div class="tableContainer">
       <mat-card class="tabl">
 
-        <table mat-table [dataSource]="dataSource" matSort>
+        <div class="searchFilter">
+          <mat-form-field appearance="standard">
+            <mat-label>Filter</mat-label>
+            <input matInput (keyup)="applyFilter($any($event.target).value)" placeholder="Ex. Mia" #input>
+          </mat-form-field>
+        </div>
+
+        <table mat-table [dataSource]="dataSource">
           <ng-container matColumnDef="id">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+            <th mat-header-cell *matHeaderCellDef> ID </th>
             <td mat-cell *matCellDef="let employee"> {{ employee.employeeId }} </td>
           </ng-container>
 
           <ng-container matColumnDef="name">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+            <th mat-header-cell *matHeaderCellDef> Name </th>
             <td mat-cell *matCellDef="let employee"> {{ employee.employeeName }} </td>
           </ng-container>
 
           <ng-container matColumnDef="role">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header> Role </th>
+            <th mat-header-cell *matHeaderCellDef> Role </th>
             <td mat-cell *matCellDef="let employee"> {{ employee.employeeRole }} </td>
           </ng-container>
 
           <ng-container matColumnDef="action">
             <th mat-header-cell *matHeaderCellDef> Action </th>
             <td mat-cell *matCellDef="let employee">
-              <button mat-icon-button color="warn">
+              <button mat-icon-button color="warn" (click)="deleteEmployee(employee.employeeId)">
                 <mat-icon>delete</mat-icon>
               </button>
             </td>
@@ -42,12 +49,11 @@
           <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
 
-        <!--
         <mat-paginator [pageSizeOptions]="[5]"
                        showFirstLastButtons
                        aria-label="Select page">
         </mat-paginator>
-        -->
+
 
       </mat-card>
     </div>
@@ -62,38 +68,41 @@
             <p>Add Employees</p>
           </div>
 
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Employee Name</mat-label>
-            <input matInput placeholder="Ex. John">
-          </mat-form-field>
+          <form>
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Employee Name</mat-label>
+              <input matInput [formControl]="employeeName" placeholder="Ex. John" required>
+            </mat-form-field>
 
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Employee Role</mat-label>
-            <input matInput placeholder="Ex. Waiter">
-          </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Employee Role</mat-label>
+              <input matInput [formControl]="employeeRole" placeholder="Ex. Waiter" required>
+            </mat-form-field>
 
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Employee Username</mat-label>
-            <input matInput placeholder="Ex. johndoe">
-          </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Employee Username</mat-label>
+              <input matInput [formControl]="employeeUsername" placeholder="Ex. johndoe" required>
+            </mat-form-field>
 
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Employee Password</mat-label>
-            <input matInput
-                   [type]="hidePassword ? 'password' : 'text'"
-                   [formControl]="pw" placeholder="Password">
-            <button mat-icon-button matSuffix
-                    (click)="hidePassword = !hidePassword"
-                    [attr.aria-label]="'Hide password'"
-                    [attr.aria-pressed]="hidePassword">
-              <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Employee Password</mat-label>
+              <input matInput
+                     [type]="hidePassword ? 'password' : 'text'"
+                     [formControl]="employeePassword" placeholder="Password" required>
+              <button mat-icon-button matSuffix
+                      (click)="hidePassword = !hidePassword"
+                      [attr.aria-label]="'Hide password'"
+                      [attr.aria-pressed]="hidePassword">
+                <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
+
+            <br>
+
+            <button mat-fab class = "add-icon" aria-label="Add icon" color="basic" (click)="onCreateEmployee()">
+              <mat-icon><b>add</b></mat-icon>
             </button>
-          </mat-form-field>
-
-          <br>
-          <button mat-fab class = "add-icon" aria-label="Add icon" color="basic">
-            <mat-icon><b>add</b></mat-icon>
-          </button>
+          </form>
 
         </mat-card>
       </mat-card>

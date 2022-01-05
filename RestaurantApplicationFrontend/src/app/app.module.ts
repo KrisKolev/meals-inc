@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import '@angular/localize/init';
 
 import { AppComponent } from './app.component';
 import { EmployeesComponent } from './employees/employees.component';
@@ -46,6 +47,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { InfoDialogComponent } from './info-dialog/info-dialog.component';
 import axios from "axios";
 import { OrdersPageComponent } from './orders-page/orders-page.component';
+import { OrdersDialogComponent} from './orders-dialog/orders-dialog.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,8 @@ import { OrdersPageComponent } from './orders-page/orders-page.component';
     ErrorComponent,
     LoginPageComponent,
     InfoDialogComponent,
-    OrdersPageComponent
+    OrdersPageComponent,
+    OrdersDialogComponent
   ],
     imports: [
         BrowserModule,

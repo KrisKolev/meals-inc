@@ -10,5 +10,5 @@ public interface IProductDal
     void AddProduct(Product product);
     Product saveAndFlush(Product product);
     Product getById(Integer id);
-    void deleteProduct(Product product);
+    void deleteProduct(int id);
 }

@@ -41,9 +41,9 @@ public class ProductDalJPA implements IProductDal
     }
 
     @Override
-    public void deleteProduct(Product product)
+    public void deleteProduct(int id)
     {
-        repo.delete(product);
+        repo.deleteById(id);
     }
 
     @Override

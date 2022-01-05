@@ -38,9 +38,9 @@ public class EmployeeDalJPA implements IEmployeeDal
     }
 
     @Override
-    public void deleteEmployee(Employee employee)
+    public void deleteEmployee(int id)
     {
-        repo.delete(employee);
+        repo.deleteById(id);
     }
 
     @Override

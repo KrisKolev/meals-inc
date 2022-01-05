@@ -53,9 +53,9 @@ public class ProducService implements IProductService
     }
 
     @Override
-    public void deleteProduct(Product product)
+    public void deleteProduct(int id)
     {
-        dal.deleteProduct(product);
+        dal.deleteProduct(id);
     }
 
     private ProductDTO ConvertDTO(Product product)

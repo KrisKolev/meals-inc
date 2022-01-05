@@ -25,7 +25,7 @@ public class EmployeeController
     @Autowired
     private IEmployeeService service;
 
-    @GetMapping()
+    @GetMapping
     public ResponseEntity<List<EmployeeDTO>> GetAllEmployees()
     {
         List<EmployeeDTO> employees = service.GetAllEmployees();
@@ -41,29 +41,37 @@ public class EmployeeController
     }
 
     @PostMapping
-    public ResponseEntity<String> CreateEmployee(@RequestBody Employee employee)
+    public Employee CreateEmployee(@RequestParam("employeeName") String employeeName,
+                                   @RequestParam("employeeRole") String employeeRole,
+                                   @RequestParam("employeeUsername") String employeeUsername,
+                                   @RequestParam("employeePassword") String employeePassword)
     {
-        JSONObject jsonObject = new JSONObject();
-
-        try
-        {
-            Employee temp = service.saveAndFlush(employee);
-            jsonObject.put("message", temp.getEmployeeName() + " saved successfully");
-            return new ResponseEntity<String>(jsonObject.toString(), HttpStatus.OK);
-        }
-        catch (JSONException e)
-        {
-            return new ResponseEntity<String>(jsonObject.toString(), HttpStatus.UNAUTHORIZED);
-        }
+        Employee employee = service.saveAndFlush(new Employee(employeeName, employeeRole, employeeUsername, employeePassword));
+        return employee;
     }
 
     @DeleteMapping
-    public ResponseEntity<Employee> DeleteEmployee(@RequestBody Employee employee)
+    public void DeleteEmployee(@RequestParam int employeeId)
     {
-        service.deleteEmployee(employee);
-
-        return ResponseEntity.ok().body(employee);
+        service.deleteEmployee(employeeId);
     }
+
+//    @PostMapping
+//    public ResponseEntity<String> CreateEmployee(@RequestBody Employee employee)
+//    {
+//        JSONObject jsonObject = new JSONObject();
+//
+//        try
+//        {
+//            Employee temp = service.saveAndFlush(employee);
+//            jsonObject.put("message", temp.getEmployeeName() + " saved successfully");
+//            return new ResponseEntity<String>(jsonObject.toString(), HttpStatus.OK);
+//        }
+//        catch (JSONException e)
+//        {
+//            return new ResponseEntity<String>(jsonObject.toString(), HttpStatus.UNAUTHORIZED);
+//        }
+//    }
 
 //    @GetMapping("/id/{id}")
 //    public ResponseEntity<Employee> GetEmployeeById(@PathVariable("id") int id)

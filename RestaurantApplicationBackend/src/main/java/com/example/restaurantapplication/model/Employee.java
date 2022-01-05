@@ -27,7 +27,7 @@ public class Employee
     @Column(name = "employeeRole", nullable = false)
     private String employeeRole;
 
-    @Column(name = "employeeUsername",nullable = false, unique = true)
+    @Column(name = "employeeUsername",nullable = false)
     private String employeeUsername;
 
     @Column

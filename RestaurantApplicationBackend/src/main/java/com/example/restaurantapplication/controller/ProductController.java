@@ -40,29 +40,37 @@ public class ProductController
     }
 
     @PostMapping
-    public ResponseEntity<String> CreateProduct(@RequestBody Product product)
+    public Product CreateProduct(@RequestParam("productName") String productName,
+                                 @RequestParam("productPrice") double productPrice)
     {
-        JSONObject jsonObject = new JSONObject();
-
-        try
-        {
-            Product temp = service.saveAndFlush(product);
-            jsonObject.put("message", temp.getProductName() + " saved successfully");
-            return new ResponseEntity<String>(jsonObject.toString(), HttpStatus.OK);
-        }
-        catch (JSONException e)
-        {
-            return new ResponseEntity<String>(jsonObject.toString(), HttpStatus.UNAUTHORIZED);
-        }
+        Product product = service.saveAndFlush(new Product(productName, productPrice));
+        return product;
     }
+
 
     @DeleteMapping
-    public ResponseEntity<Product> DeleteProduct(@RequestBody Product product)
+    public void DeleteProduct(@RequestParam int productID)
     {
-        service.deleteProduct(product);
-
-        return ResponseEntity.ok().body(product);
+        service.deleteProduct(productID);
     }
+
+//    @PostMapping
+//    public ResponseEntity<String> CreateProduct(@RequestBody Product product)
+//    {
+//        JSONObject jsonObject = new JSONObject();
+//
+//        try
+//        {
+//            Product temp = service.saveAndFlush(product);
+//            jsonObject.put("message", temp.getProductName() + " saved successfully");
+//            return new ResponseEntity<String>(jsonObject.toString(), HttpStatus.OK);
+//        }
+//        catch (JSONException e)
+//        {
+//            return new ResponseEntity<String>(jsonObject.toString(), HttpStatus.UNAUTHORIZED);
+//        }
+//    }
+
 
 //    private static final MockDataRestaurant mockDataRestaurant = new MockDataRestaurant();
 

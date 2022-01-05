@@ -50,9 +50,9 @@ public class EmployeeService implements IEmployeeService
     }
 
     @Override
-    public void deleteEmployee(Employee employee)
+    public void deleteEmployee(int id)
     {
-        dal.deleteEmployee(employee);
+        dal.deleteEmployee(id);
     }
 
     @Override
