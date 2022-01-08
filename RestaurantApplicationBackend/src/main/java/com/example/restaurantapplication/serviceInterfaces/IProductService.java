@@ -11,5 +11,6 @@ public interface IProductService
     void AddProduct(Product product);
     Product saveAndFlush(Product product);
     Product getById(Integer id);
+    ProductDTO getByIdDTO(Integer id);
     void deleteProduct(int id);
 }

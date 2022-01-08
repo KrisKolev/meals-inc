@@ -1,14 +1,14 @@
 package com.example.restaurantapplication.dalInterfaces;
 
-import com.example.restaurantapplication.model.Table;
+import com.example.restaurantapplication.model.DinnerTable;
 
 import java.util.List;
 
 public interface ITableDal
 {
-    List<Table> getAllTables();
-    void addTable(Table table);
-    void deleteTable(Table table);
-    Table saveAndFlush(Table table);
-    Table getById(Integer id);
+    List<DinnerTable> getAllTables();
+    void addTable(DinnerTable table);
+    void deleteTable(DinnerTable table);
+    DinnerTable saveAndFlush(DinnerTable table);
+    DinnerTable getById(Integer id);
 }

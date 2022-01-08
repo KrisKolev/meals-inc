@@ -39,6 +39,13 @@ public class ProductController
         }
     }
 
+    @GetMapping("/getById")
+    public ProductDTO GetProductById(@RequestParam("productID")int productID)
+    {
+        ProductDTO product = service.getByIdDTO(productID);
+        return product;
+    }
+
     @PostMapping
     public Product CreateProduct(@RequestParam("productName") String productName,
                                  @RequestParam("productPrice") double productPrice)

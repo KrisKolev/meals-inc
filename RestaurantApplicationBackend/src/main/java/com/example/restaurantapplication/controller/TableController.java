@@ -1,13 +1,10 @@
 package com.example.restaurantapplication.controller;
 
 import com.example.restaurantapplication.dto.TableDTO;
-import com.example.restaurantapplication.model.Employee;
 import com.example.restaurantapplication.model.Product;
-import com.example.restaurantapplication.model.Table;
-import com.example.restaurantapplication.repository.MockDataRestaurant;
+import com.example.restaurantapplication.model.DinnerTable;
 import com.example.restaurantapplication.serviceInterfaces.IProductService;
 import com.example.restaurantapplication.serviceInterfaces.ITableService;
-import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @RestController
 @CrossOrigin("http://localhost:4200")
@@ -33,7 +29,6 @@ public class TableController
     public ResponseEntity<List<TableDTO>> GetAllTables()
     {
         List<TableDTO> tables = service.getAllTables();
-
         if (tables != null)
         {
             return ResponseEntity.ok().body(tables);
@@ -44,14 +39,20 @@ public class TableController
         }
     }
 
+    @GetMapping("/getById")
+    public TableDTO GetTableById(@RequestParam("tableId")int tableId)
+    {
+        TableDTO table = service.getByIdDTO(tableId);
+        return table;
+    }
+
     @PostMapping
-    public ResponseEntity<String> CreateTable(@RequestBody Table table)
+    public ResponseEntity<String> CreateTable(@RequestBody DinnerTable table)
     {
         JSONObject jsonObject = new JSONObject();
-
         try
         {
-            Table temp = service.saveAndFlush(table);
+            DinnerTable temp = service.saveAndFlush(table);
             jsonObject.put("message", temp.getTableName() + " saved successfully");
             return new ResponseEntity<String>(jsonObject.toString(), HttpStatus.OK);
         }
@@ -63,40 +64,21 @@ public class TableController
     }
 
     @PostMapping("/assignProduct")
-    public ResponseEntity<String> AssignProduct(@RequestParam String productId,
+    public ResponseEntity<String> AssignProduct(@RequestParam String productID,
                                                 @RequestParam String tableId)
     {
-        List<Product> productList = new ArrayList<>(List.of(
-                productService.getById(Integer.parseInt(productId,10))
-        ));
-
-        Table table = service.getById(Integer.parseInt(tableId, 10));
-
-        table.setProducts(productList);
-        service.saveAndFlush(table);
+        DinnerTable table = service.getById(Integer.parseInt(tableId, 10));
+        Product product = productService.getById(Integer.parseInt(productID, 10));
+        table.getProducts().add(product);
+        product.getPlace().add(table);
+        service.addTable(table);
         return new ResponseEntity<>("blah",HttpStatus.OK);
     }
 
     @DeleteMapping
-    public ResponseEntity<Table> DeleteTable(@RequestBody Table table)
+    public ResponseEntity<DinnerTable> DeleteTable(@RequestBody DinnerTable table)
     {
         service.deleteTable(table);
-
         return ResponseEntity.ok().body(table);
     }
-
-//    @GetMapping("/id/{id}")
-//    public ResponseEntity<Table> GetTableById(@PathVariable("id")int id)
-//    {
-//        Table table = mockDataRestaurant.GetTableById(id);
-//
-//        if (table != null)
-//        {
-//            return ResponseEntity.ok().body(table);
-//        }
-//        else
-//        {
-//            return ResponseEntity.notFound().build();
-//        }
-//    }
 }

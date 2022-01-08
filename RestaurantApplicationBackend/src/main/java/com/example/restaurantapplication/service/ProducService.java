@@ -53,6 +53,12 @@ public class ProducService implements IProductService
     }
 
     @Override
+    public ProductDTO getByIdDTO(Integer id)
+    {
+        return ConvertDTO(dal.getById(id));
+    }
+
+    @Override
     public void deleteProduct(int id)
     {
         dal.deleteProduct(id);

@@ -2,7 +2,7 @@ package com.example.restaurantapplication.service;
 
 import com.example.restaurantapplication.dalInterfaces.ITableDal;
 import com.example.restaurantapplication.dto.TableDTO;
-import com.example.restaurantapplication.model.Table;
+import com.example.restaurantapplication.model.DinnerTable;
 import com.example.restaurantapplication.serviceInterfaces.ITableService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,30 +35,36 @@ public class TableService implements ITableService
     }
 
     @Override
-    public void addTable(Table table)
+    public void addTable(DinnerTable table)
     {
         dal.addTable(table);
     }
 
     @Override
-    public void deleteTable(Table table)
+    public void deleteTable(DinnerTable table)
     {
         dal.deleteTable(table);
     }
 
     @Override
-    public Table saveAndFlush(Table table)
+    public DinnerTable saveAndFlush(DinnerTable table)
     {
         return dal.saveAndFlush(table);
     }
 
     @Override
-    public Table getById(Integer id)
+    public DinnerTable getById(Integer id)
     {
         return dal.getById(id);
     }
 
-    private TableDTO ConvertDTO(Table table)
+    @Override
+    public TableDTO getByIdDTO(Integer id)
+    {
+        return ConvertDTO(dal.getById(id));
+    }
+
+    private TableDTO ConvertDTO(DinnerTable table)
     {
         TableDTO tableDTO = modelMapper.map(table, TableDTO.class);
         return tableDTO;

@@ -1,15 +1,16 @@
 package com.example.restaurantapplication.serviceInterfaces;
 
 import com.example.restaurantapplication.dto.TableDTO;
-import com.example.restaurantapplication.model.Table;
+import com.example.restaurantapplication.model.DinnerTable;
 
 import java.util.List;
 
 public interface ITableService
 {
     List<TableDTO> getAllTables();
-    void addTable(Table table);
-    void deleteTable(Table table);
-    Table saveAndFlush(Table table);
-    Table getById(Integer id);
+    void addTable(DinnerTable table);
+    void deleteTable(DinnerTable table);
+    DinnerTable saveAndFlush(DinnerTable table);
+    DinnerTable getById(Integer id);
+    TableDTO getByIdDTO(Integer id);
 }

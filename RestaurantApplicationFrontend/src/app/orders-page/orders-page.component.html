@@ -7,7 +7,7 @@
 <div class="nice"></div>
 
     <ul class="list-group">
-      <li *ngFor="let table of tables">
+      <li *ngFor="let table of tables; let i = index">
 
         <div class="tablesContainer">
           <mat-card class="tabl">
@@ -16,7 +16,7 @@
 
               <div class="tableText">
               Table: {{ table.tableId }}
-              <button mat-icon-button (click)="openThisDialog()">
+              <button mat-icon-button (click)="openThisDialog(i, table.tableName)">
                 <mat-icon>more_horiz</mat-icon>
               </button>
               </div>

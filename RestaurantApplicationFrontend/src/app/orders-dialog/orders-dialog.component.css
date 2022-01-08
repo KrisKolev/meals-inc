@@ -1,0 +1,74 @@
+
+.title {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  padding-top: 1vw;
+  transition: 0.3s;
+}
+
+.tableContainer {
+  padding: 30px;
+  max-width: 50vw;
+  width: 50vw;
+  display: flex;
+  margin-left: 23vw;
+}
+
+table {
+  display: table;
+  width: 50vw;
+  border-radius: 10px;
+}
+
+.tabl {
+  width: 50vw;
+  max-width: 50vw;
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 10px;
+}
+
+.mat-column-action {
+  text-align: right;
+}
+
+.searchFilter {
+  background-color: white;
+}
+
+::ng-deep .mat-form-field {
+  width: 50vw;
+}
+
+.close {
+  background-color: #5897b1;
+  color: black;
+  transition: 0.3s;
+}
+
+.close2 {
+  background-color: #5897b1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: black;
+  transition: 0.3s;
+  font-size: 30px;
+}
+
+.close2:hover {
+  background-color: #325a68;
+  color: white;
+}
+
+.close:hover {
+  background-color: #325a68;
+  color: white;
+}
+
+.btn {
+  justify-content: center;
+}
+
+.checkout {
+  justify-content: right;
+}

@@ -1,7 +1,7 @@
 package com.example.restaurantapplication.repository;
 
 import com.example.restaurantapplication.dalInterfaces.ITableDal;
-import com.example.restaurantapplication.model.Table;
+import com.example.restaurantapplication.model.DinnerTable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -24,31 +24,31 @@ public class TableDalJPA implements ITableDal
     }
 
     @Override
-    public List<Table> getAllTables()
+    public List<DinnerTable> getAllTables()
     {
         return repo.findAll();
     }
 
     @Override
-    public void addTable(Table table)
+    public void addTable(DinnerTable table)
     {
         repo.save(table);
     }
 
     @Override
-    public void deleteTable(Table table)
+    public void deleteTable(DinnerTable table)
     {
         repo.delete(table);
     }
 
     @Override
-    public Table saveAndFlush(Table table)
+    public DinnerTable saveAndFlush(DinnerTable table)
     {
         return repo.saveAndFlush(table);
     }
 
     @Override
-    public Table getById(Integer id)
+    public DinnerTable getById(Integer id)
     {
         return repo.getById(id);
     }

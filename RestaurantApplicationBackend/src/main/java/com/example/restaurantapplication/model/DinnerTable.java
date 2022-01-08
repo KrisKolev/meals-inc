@@ -8,14 +8,16 @@ import org.codehaus.jackson.annotate.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@javax.persistence.Table(name = "place")
-public class Table
+@Table(name = "place")
+public class DinnerTable
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,11 +26,15 @@ public class Table
     @Column(name = "tableName", nullable = false)
     private String tableName;
 
-    @ManyToMany(mappedBy = "place")
-    @JsonIgnore
-    List<Product> products;
+    @ManyToMany(fetch = FetchType.LAZY,
+            cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+    },
+            mappedBy = "place")
+    List<Product> products = new ArrayList<>();
 
-    public Table(String tableName)
+    public DinnerTable(String tableName)
     {
         this.tableName = tableName;
     }

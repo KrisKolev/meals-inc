@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {OrdersPageService} from "./orders-page.service";
 import {Subscription} from "rxjs";
-import {MatDialog} from "@angular/material/dialog";
+import {MAT_DIALOG_DATA, MatDialog} from "@angular/material/dialog";
 import {InfoDialogComponent} from "../info-dialog/info-dialog.component";
 import {OrdersDialogComponent} from "../orders-dialog/orders-dialog.component";
+import {TablesService} from "../tables/tables.service";
 
 @Component({
   selector: 'app-orders-page',
@@ -13,12 +14,24 @@ import {OrdersDialogComponent} from "../orders-dialog/orders-dialog.component";
 export class OrdersPageComponent implements OnInit {
 
   tables: any;
+  tableById: any;
   title = "Orders";
 
-  constructor(public service: OrdersPageService, public dialog: MatDialog) { }
+  constructor(public service: TablesService,
+              public readonly dialog:MatDialog) { }
 
-  openThisDialog() {
-    this.dialog.open(OrdersDialogComponent);
+  openThisDialog(i:number, tableName:string) {
+    this.dialog.open(OrdersDialogComponent, {
+      data: {
+        tableName: tableName
+      }
+    });
+  }
+
+  getTableById(id: string) {
+    this.tableById = this.service.getSight(id).subscribe((s) => {
+      this.tableById = s
+    });
   }
 
   ngOnInit(): void {

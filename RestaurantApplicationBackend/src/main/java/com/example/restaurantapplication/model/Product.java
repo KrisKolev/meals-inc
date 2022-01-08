@@ -1,20 +1,21 @@
 package com.example.restaurantapplication.model;
 
+import jdk.dynalink.linker.LinkerServices;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import com.example.restaurantapplication.model.Table;
-import org.codehaus.jackson.annotate.JsonIgnore;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@javax.persistence.Table(name = "product")
+@Table(name = "product")
 public class Product
 {
     @Id
@@ -27,13 +28,15 @@ public class Product
     @Column(name = "productPrice", nullable = false)
     private double productPrice;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.LAZY,
+            cascade = {
+                    CascadeType.PERSIST,
+                    CascadeType.MERGE
+            })
     @JoinTable(name = "product_place",
             joinColumns = { @JoinColumn(name = "productid") },
-            inverseJoinColumns = { @JoinColumn(name = "place_id") }
-    )
-    @JsonIgnore
-    private List<Table> place;
+            inverseJoinColumns = { @JoinColumn(name = "table_id") })
+    List<DinnerTable> place = new ArrayList<>();
 
     public Product(String productName, double productPrice)
     {
