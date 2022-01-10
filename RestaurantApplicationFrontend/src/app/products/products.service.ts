@@ -36,5 +36,7 @@ export class ProductsService {
       });
       return this.http.delete(`${this.REST_API_PRODUCTS}`, {params: httpParams});
     }
+
+    // assignProduct()
 }
 

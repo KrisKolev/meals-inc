@@ -5,33 +5,34 @@ import com.example.restaurantapplication.dto.EmployeeDTO;
 import com.example.restaurantapplication.model.Employee;
 import com.example.restaurantapplication.repository.EmployeeDalJPA;
 import com.example.restaurantapplication.serviceInterfaces.IEmployeeService;
+import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import javax.websocket.Encoder;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-@Transactional
 public class EmployeeService implements IEmployeeService
 {
     IEmployeeDal dal;
-//    private final PasswordEncoder passwordEncoder;
+    private final PasswordEncoder passwordEncoder;
 
     @Autowired
     ModelMapper modelMapper;
 
     @Autowired
-    public EmployeeService(IEmployeeDal dal/* PasswordEncoder passwordEncoder*/)
+    public EmployeeService(IEmployeeDal dal, PasswordEncoder passwordEncoder)
     {
-//        this.passwordEncoder = passwordEncoder;
+        this.passwordEncoder = passwordEncoder;
         this.dal = dal;
-        //this.saveAndFlush(new Employee("test", "someone", "test1", "test"));
+//        this.saveAndFlush(new Employee("Potato", "Waiter", "potato1", "12345"));
     }
 
     @Override
@@ -43,7 +44,13 @@ public class EmployeeService implements IEmployeeService
                 .collect(Collectors.toList());
     }
 
-@Override
+    @Override
+    public Employee findByUsername(String username)
+    {
+        return dal.findByUsername(username);
+    }
+
+    @Override
     public void AddEmployee(Employee employee)
     {
         dal.AddEmployee(employee);
@@ -58,7 +65,7 @@ public class EmployeeService implements IEmployeeService
     @Override
     public Employee saveAndFlush(Employee employee)
     {
-//        employee.setPassword(passwordEncoder.encode(employee.getEmployeePassword()));
+        employee.setPassword(passwordEncoder.encode(employee.getEmployeePassword()));
         return dal.saveAndFlush(employee);
     }
 

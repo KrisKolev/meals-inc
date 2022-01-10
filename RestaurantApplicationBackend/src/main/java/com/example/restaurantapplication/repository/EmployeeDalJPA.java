@@ -1,11 +1,13 @@
 package com.example.restaurantapplication.repository;
 
 import com.example.restaurantapplication.dalInterfaces.IEmployeeDal;
+import com.example.restaurantapplication.dto.EmployeeDTO;
 import com.example.restaurantapplication.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class EmployeeDalJPA implements IEmployeeDal
@@ -35,6 +37,12 @@ public class EmployeeDalJPA implements IEmployeeDal
     public void AddEmployee(Employee employee)
     {
         repo.save(employee);
+    }
+
+    @Override
+    public Employee findByUsername(String username)
+    {
+        return repo.findByEmployeeUsername(username);
     }
 
     @Override

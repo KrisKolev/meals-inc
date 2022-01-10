@@ -20,10 +20,11 @@ export class OrdersPageComponent implements OnInit {
   constructor(public service: TablesService,
               public readonly dialog:MatDialog) { }
 
-  openThisDialog(i:number, tableName:string) {
+  openThisDialog(i:number, tableName:string, tableId:number) {
     this.dialog.open(OrdersDialogComponent, {
       data: {
-        tableName: tableName
+        tableName: tableName,
+        tableId: tableId
       }
     });
   }
