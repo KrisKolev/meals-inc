@@ -1,0 +1,52 @@
+# Docker Compose file Reference (https://docs.docker.com/compose/compose-file/)
+version: '3'
+
+#Define services
+services:
+
+  #PostgreSQL database for the application
+  mealsdb:
+    image: "postgres"
+    container_name: mealsdb
+    #Volume mounted for database for the storage
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432 # Forward the exposed port 5432 on the container to port 5432 on the host machine
+
+    #Environment variable for DB name, user and password
+    environment:
+      - POSTGRES_DB=IndividualProjectS3
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+
+  #Back-end Spring Boot Application
+  mealsbackend:
+    #The docker file in mealsbackend build the jar and provides the docker image with the following name.
+    build: ./RestaurantApplicationBackend
+    container_name: mealsbackend
+
+    #Environment variables for Spring Boot Application.
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://mealsdb:5432/IndividualProjectS3
+      - DB_SERVER=PostgreSQL 14
+      - POSTGRES_DB=IndividualProjectS3
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+    ports:
+      - 8080:8080 # Forward the exposed port 8080 on the container to port 8080 on the host machine
+    links:
+      - mealsdb
+
+  #Front-end Angular Application
+  frontend:
+    build: ./RestaurantApplicationFrontend
+    container_name: frontend
+    ports:
+      - 4200:80
+    links:
+      - mealsbackend
+
+#Volumes for DB data
+volumes:
+  pg-data:

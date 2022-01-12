@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="527494ec-0573-4eee-9f11-08bfdd63f56b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/RestaurantApplicationBackend/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantApplicationBackend/src/main/java/com/example/restaurantapplication/security/AuthenticationEmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationBackend/src/main/java/com/example/restaurantapplication/security/AuthenticationEmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantApplicationBackend/src/main/java/com/example/restaurantapplication/security/JWTAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationBackend/src/main/java/com/example/restaurantapplication/security/JWTAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantApplicationBackend/src/main/java/com/example/restaurantapplication/security/JWTAuthorizationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationBackend/src/main/java/com/example/restaurantapplication/security/JWTAuthorizationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantApplicationBackend/src/main/java/com/example/restaurantapplication/security/WebSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantApplicationBackend/src/main/java/com/example/restaurantapplication/security/WebSecurity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +31,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/RestaurantApplicationBackend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/RestaurantApplicationFrontend" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="527494ec-0573-4eee-9f11-08bfdd63f56b" name="Default Changelist" comment="" />
@@ -36,7 +44,24 @@
       <updated>1634560870023</updated>
       <workItem from="1634560872284" duration="22000" />
       <workItem from="1634722982720" duration="24000" />
+      <workItem from="1641981807344" duration="1960000" />
+      <workItem from="1641986889287" duration="599000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

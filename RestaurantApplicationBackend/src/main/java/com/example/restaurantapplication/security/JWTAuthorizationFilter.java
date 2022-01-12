@@ -2,9 +2,12 @@ package com.example.restaurantapplication.security;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
+import com.auth0.jwt.interfaces.DecodedJWT;
 import org.apache.catalina.User;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
@@ -14,6 +17,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 
 import static com.example.restaurantapplication.security.SecurityConstraints.*;
 
@@ -49,20 +54,39 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter
 
         if (token != null)
         {
-            String employee = JWT.require(Algorithm.HMAC512(SECRET.getBytes()))
-                    .build()
-                    .verify(token.replace(TOKEN_PREFIX, ""))
-                    .getSubject();
+//            String employee = JWT.require(Algorithm.HMAC512(SECRET.getBytes()))
+//                    .build()
+//                    .verify(token.replace(TOKEN_PREFIX, ""))
+//                    .getSubject();
+//
+//            if (employee != null)
+//            {
+//                return new UsernamePasswordAuthenticationToken(employee, null, new ArrayList<>());
+//            }
+//
+//            return null;
 
-            if (employee != null)
+            DecodedJWT verify = JWT.require(Algorithm.HMAC512(SECRET.getBytes()))
+                    .build()
+                    .verify(token.replace(TOKEN_PREFIX, ""));
+
+            String username = verify.getSubject();
+            String role = verify.getClaim("role").asString();
+
+            if (username != null)
             {
-                return new UsernamePasswordAuthenticationToken(employee, null, new ArrayList<>());
+                return new UsernamePasswordAuthenticationToken(username, null, getAuthorities(role));
             }
 
             return null;
         }
 
         return null;
+    }
+
+    private Collection<? extends GrantedAuthority> getAuthorities(String role)
+    {
+        return Arrays.asList(new SimpleGrantedAuthority(role));
     }
 
 }
