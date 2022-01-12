@@ -1,6 +1,5 @@
 
 
-
 <p>
   <mat-toolbar class="toolbar" color="basic">
     <span class = "name"> Meals INC. </span>
@@ -17,14 +16,14 @@
 
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Username</mat-label>
-        <input matInput placeholder="Ex. John">
+        <input matInput [formControl]="employeeUsername" placeholder="Ex. John">
       </mat-form-field>
 
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Password</mat-label>
         <input matInput
                [type]="hidePassword ? 'password' : 'text'"
-               [formControl]="pw" placeholder="Ex. Doe">
+               [formControl]="employeePassword" placeholder="Ex. Doe">
         <button mat-icon-button matSuffix
                 (click)="hidePassword = !hidePassword"
                 [attr.aria-label]="'Hide password'"
@@ -35,7 +34,7 @@
 
       <br>
 
-      <button mat-fab routerLink="/landing" class="login-icon" aria-label="Add icon" color="basic">
+      <button mat-fab class="login-icon" aria-label="Add icon" color="basic" (click)="loginCheck()">
         <mat-icon>login</mat-icon>
       </button>
     </mat-card>

@@ -1,7 +1,8 @@
 
-import {HttpClient, HttpParams} from "@angular/common/http";
+import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Employees } from '../IEmployees';
+import {AuthenticationService} from "../service/authentication.service";
 
 @Injectable({
     providedIn: 'root'
@@ -10,12 +11,16 @@ export class EmployeesService {
 
     readonly REST_API_EMPLOYEES;
 
-    constructor(private http: HttpClient) {
+    constructor(private http: HttpClient, private authService: AuthenticationService) {
         this.REST_API_EMPLOYEES = 'http://localhost:8080/employees';
     }
 
     getEmployees() {
-        return this.http.get(`${this.REST_API_EMPLOYEES}`);
+      const httpHeaders = new HttpHeaders({
+        'Authorization':this.authService.auth
+      });
+
+        return this.http.get(`${this.REST_API_EMPLOYEES}`, {headers: httpHeaders});
     }
 
     createEmployee(employeeName: string,
@@ -30,7 +35,11 @@ export class EmployeesService {
           employeePassword: employeePassword
         }
       });
-      return this.http.post(`${this.REST_API_EMPLOYEES}`, null, {params: httpParams});
+
+      const httpHeaders = new HttpHeaders({
+        'Authorization':this.authService.auth
+      });
+      return this.http.post(`${this.REST_API_EMPLOYEES}`, null, {params: httpParams, headers:httpHeaders});
     }
 
     deleteEmployee(employeeId: number) {
@@ -39,6 +48,10 @@ export class EmployeesService {
           employeeId: employeeId
         }
       });
-      return this.http.delete(`${this.REST_API_EMPLOYEES}`, {params: httpParams});
+
+      const httpHeaders = new HttpHeaders({
+        'Authorization':this.authService.auth
+      });
+      return this.http.delete(`${this.REST_API_EMPLOYEES}`, {params: httpParams, headers:httpHeaders});
     }
 }

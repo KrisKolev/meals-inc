@@ -8,6 +8,7 @@ import {MatSort} from "@angular/material/sort";
 import {FormControl, Validators} from "@angular/forms";
 import {Subscription} from "rxjs";
 import localizeExtractLoader from "@angular-devkit/build-angular/src/extract-i18n/ivy-extract-loader";
+import {AuthenticationService} from "../service/authentication.service";
 
 @Component({
   selector: 'app-employees',
@@ -34,7 +35,8 @@ export class EmployeesComponent implements OnInit {
 
   hidePassword = true;
 
-  constructor(public service: EmployeesService) { }
+  constructor(public service: EmployeesService, private authService: AuthenticationService) { }
+
 
   ngOnInit(): void {
     this.subs.add(this.service.getEmployees().subscribe(data => {
