@@ -1,5 +1,5 @@
 
-import {AfterViewInit, Component, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
+import {AfterViewInit, Component, OnDestroy, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
 import {EmployeesService} from "./employees.service";
 import {MatPaginator} from "@angular/material/paginator";
 import {MatTableDataSource} from "@angular/material/table";
@@ -37,6 +37,21 @@ export class EmployeesComponent implements OnInit {
 
   constructor(public service: EmployeesService, private authService: AuthenticationService) { }
 
+  get isManager() {
+    if (this.authService.isManager)
+    {
+      return true;
+    }
+    return false;
+  }
+
+  get isEmployee() {
+    if (this.authService.isEmployee)
+    {
+      return true;
+    }
+    return false;
+  }
 
   ngOnInit(): void {
     this.subs.add(this.service.getEmployees().subscribe(data => {

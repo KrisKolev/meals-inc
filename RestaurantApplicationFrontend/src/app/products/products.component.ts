@@ -6,6 +6,7 @@ import {MatPaginator} from "@angular/material/paginator";
 import {Subscription} from "rxjs";
 import {Employees} from "../IEmployees";
 import {FormBuilder, FormControl, Validators} from "@angular/forms";
+import {AuthenticationService} from "../service/authentication.service";
 
 @Component({
   selector: 'app-products',
@@ -28,7 +29,15 @@ export class ProductsComponent implements OnInit {
   productName = new FormControl('', [Validators.required]);
   productPrice = new FormControl('', [Validators.required]);
 
-  constructor(public service: ProductsService) {  }
+  constructor(public service: ProductsService, private authService: AuthenticationService) {  }
+
+  get isManager() {
+    if (this.authService.isManager)
+    {
+      return true;
+    }
+    return false;
+  }
 
   ngOnInit(): void {
     this.subs.add(this.service.getProducts().subscribe(data => {

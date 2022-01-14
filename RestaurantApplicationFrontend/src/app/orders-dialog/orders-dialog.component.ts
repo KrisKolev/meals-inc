@@ -6,6 +6,7 @@ import {MatTableDataSource} from "@angular/material/table";
 import {Product} from "../IProduct";
 import {Subscription} from "rxjs";
 import {ProductsService} from "../products/products.service";
+import {OrdersDialogService} from "./orders-dialog.service";
 
 @Component({
   selector: 'app-orders-dialog',
@@ -22,9 +23,11 @@ export class OrdersDialogComponent implements OnInit {
 
   private subs = new Subscription();
   private dataArray: any;
+  mealsArray: any;
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any,
-              public service: ProductsService) { }
+              public service: ProductsService,
+              public ordersService: OrdersDialogService) { }
 
   ngOnInit(): void {
     this.subs.add(this.service.getProducts().subscribe(data => {
@@ -32,11 +35,36 @@ export class OrdersDialogComponent implements OnInit {
       this.dataSource = new MatTableDataSource<Product>(this.dataArray);
       this.dataSource.paginator = this.paginator;
     }));
+    this.subs.add(this.ordersService.getAssigned(this.data.tableId).subscribe(ordersData => {
+      this.mealsArray = ordersData;
+    }))
+  }
+
+  assignProduct(tableId:number, productID: number) {
+    this.ordersService.assignProduct(tableId, productID).subscribe((res) => {
+      console.log(res);
+    });
+
+    location.reload();
   }
 
   applyFilter(filterValue: string){
     filterValue = filterValue.trim();
     filterValue = filterValue.toLowerCase();
     this.dataSource.filter = filterValue;
+  }
+
+  currentPrice: number;
+  newPrice: number;
+
+  calculateTotal() {
+    this.currentPrice = 0;
+    this.newPrice = 0;
+
+    for (let i = 0; i <= this.mealsArray.length; i++)
+    {
+      this.newPrice = this.currentPrice + this.mealsArray[i].productPrice;
+      this.currentPrice = this.newPrice;
+    }
   }
 }

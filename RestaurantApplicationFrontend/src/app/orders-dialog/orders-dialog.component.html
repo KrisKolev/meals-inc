@@ -1,6 +1,13 @@
 
 <div mat-dialog-title class="title"> {{data.tableName}} </div>
-<div mat-dialog-title> Id: {{data.tableId}} </div>
+
+<div class="orders">
+  <ul>
+    <li *ngFor = "let meal of mealsArray">
+      {{ meal.productName }} : {{ meal.productPrice }} €
+    </li>
+  </ul>
+</div>
 
 <div mat-card-content class="tableContainer">
   <mat-card class="tabl">
@@ -31,7 +38,7 @@
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef> Action </th>
         <td mat-cell *matCellDef="let product">
-          <button mat-icon-button color="warn">
+          <button mat-icon-button color="warn" (click)="assignProduct(data.tableId, product.productID)">
             <mat-icon>add</mat-icon>
           </button>
         </td>

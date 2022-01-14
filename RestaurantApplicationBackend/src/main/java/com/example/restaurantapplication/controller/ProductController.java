@@ -60,21 +60,4 @@ public class ProductController
         service.deleteProduct(productID);
     }
 
-//    @PostMapping
-//    public ResponseEntity<String> CreateProduct(@RequestBody Product product)
-//    {
-//        JSONObject jsonObject = new JSONObject();
-//
-//        try
-//        {
-//            Product temp = service.saveAndFlush(product);
-//            jsonObject.put("message", temp.getProductName() + " saved successfully");
-//            return new ResponseEntity<String>(jsonObject.toString(), HttpStatus.OK);
-//        }
-//        catch (JSONException e)
-//        {
-//            return new ResponseEntity<String>(jsonObject.toString(), HttpStatus.UNAUTHORIZED);
-//        }
-//    }
-
 }

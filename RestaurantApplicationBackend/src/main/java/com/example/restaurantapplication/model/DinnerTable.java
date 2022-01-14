@@ -4,7 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.codehaus.jackson.annotate.JsonBackReference;
 import org.codehaus.jackson.annotate.JsonIgnore;
+import org.codehaus.jackson.annotate.JsonManagedReference;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -26,12 +28,14 @@ public class DinnerTable
     @Column(name = "tableName", nullable = false)
     private String tableName;
 
+    @JsonManagedReference
     @ManyToMany(fetch = FetchType.LAZY,
             cascade = {
             CascadeType.PERSIST,
             CascadeType.MERGE
     },
             mappedBy = "place")
+    @JsonIgnore
     List<Product> products = new ArrayList<>();
 
     public DinnerTable(String tableName)

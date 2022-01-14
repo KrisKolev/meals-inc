@@ -4,6 +4,9 @@ import jdk.dynalink.linker.LinkerServices;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.codehaus.jackson.annotate.JsonBackReference;
+import org.codehaus.jackson.annotate.JsonIgnore;
+import org.codehaus.jackson.annotate.JsonManagedReference;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -28,6 +31,7 @@ public class Product
     @Column(name = "productPrice", nullable = false)
     private double productPrice;
 
+    @JsonBackReference
     @ManyToMany(fetch = FetchType.LAZY,
             cascade = {
                     CascadeType.PERSIST,
@@ -36,6 +40,7 @@ public class Product
     @JoinTable(name = "product_place",
             joinColumns = { @JoinColumn(name = "productid") },
             inverseJoinColumns = { @JoinColumn(name = "table_id") })
+    @JsonIgnore
     List<DinnerTable> place = new ArrayList<>();
 
     public Product(String productName, double productPrice)

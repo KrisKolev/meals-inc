@@ -54,18 +54,6 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter
 
         if (token != null)
         {
-//            String employee = JWT.require(Algorithm.HMAC512(SECRET.getBytes()))
-//                    .build()
-//                    .verify(token.replace(TOKEN_PREFIX, ""))
-//                    .getSubject();
-//
-//            if (employee != null)
-//            {
-//                return new UsernamePasswordAuthenticationToken(employee, null, new ArrayList<>());
-//            }
-//
-//            return null;
-
             DecodedJWT verify = JWT.require(Algorithm.HMAC512(SECRET.getBytes()))
                     .build()
                     .verify(token.replace(TOKEN_PREFIX, ""));

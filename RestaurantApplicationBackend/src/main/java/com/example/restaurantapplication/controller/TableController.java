@@ -1,5 +1,6 @@
 package com.example.restaurantapplication.controller;
 
+import com.example.restaurantapplication.dto.ProductDTO;
 import com.example.restaurantapplication.dto.TableDTO;
 import com.example.restaurantapplication.model.Product;
 import com.example.restaurantapplication.model.DinnerTable;
@@ -73,6 +74,20 @@ public class TableController
         product.getPlace().add(table);
         service.addTable(table);
         return new ResponseEntity<>("blah",HttpStatus.OK);
+    }
+
+    @GetMapping("/getAssigned")
+    public ResponseEntity<?> GetAssigned(@RequestParam int tableId)
+    {
+        List<ProductDTO> products = service.getProductsByTable(tableId);
+        return ResponseEntity.ok().body(products);
+    }
+
+    @DeleteMapping("/deleteAssigned")
+    public ResponseEntity<?> DeleteAssigned(@RequestParam int tableId)
+    {
+        service.deleteProductsByTable(tableId);
+        return ResponseEntity.ok().body(tableId);
     }
 
     @DeleteMapping

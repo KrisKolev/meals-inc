@@ -39,7 +39,7 @@
           <ng-container matColumnDef="action">
             <th mat-header-cell *matHeaderCellDef> Action </th>
             <td mat-cell *matCellDef="let product">
-              <button mat-icon-button color="warn" (click)="deleteProduct(product.productID)">
+              <button mat-icon-button color="warn" (click)="deleteProduct(product.productID)" *ngIf="isManager">
                 <mat-icon>delete</mat-icon>
               </button>
             </td>
@@ -57,7 +57,7 @@
     </div>
   </mat-tab>
 
-  <mat-tab label="Manage">
+  <mat-tab label="Manage" *ngIf="isManager">
     <div class="tableContainer">
       <mat-card class="tabl">
         <mat-card>

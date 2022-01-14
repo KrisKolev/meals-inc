@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnDestroy } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthenticationService {
+export class AuthenticationService{
 
   currentEmployee: any;
 
@@ -40,7 +40,7 @@ export class AuthenticationService {
   get isManager() {
     if (this.currentEmployee)
     {
-      if (this.currentEmployee.AccountType == "[Manager]")
+      if (this.currentEmployee.EmployeeType == "[Manager]")
       {
         return true;
       }
@@ -51,7 +51,9 @@ export class AuthenticationService {
   get isEmployee() {
     if (this.currentEmployee)
     {
-      if (this.currentEmployee.AccountType == "[Waiter]" || this.currentEmployee.AccountType == "[Bartender]")
+      if (this.currentEmployee.EmployeeType == "[Waiter]" ||
+        this.currentEmployee.EmployeeType == "[Bartender]" ||
+        this.currentEmployee.EmployeeType == "[Waitress]")
       {
         return true;
       }

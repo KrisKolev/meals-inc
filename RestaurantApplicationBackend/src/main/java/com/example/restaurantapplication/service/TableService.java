@@ -1,8 +1,10 @@
 package com.example.restaurantapplication.service;
 
 import com.example.restaurantapplication.dalInterfaces.ITableDal;
+import com.example.restaurantapplication.dto.ProductDTO;
 import com.example.restaurantapplication.dto.TableDTO;
 import com.example.restaurantapplication.model.DinnerTable;
+import com.example.restaurantapplication.model.Product;
 import com.example.restaurantapplication.serviceInterfaces.ITableService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +37,21 @@ public class TableService implements ITableService
     }
 
     @Override
+    public List<ProductDTO> getProductsByTable(Integer tableId)
+    {
+        return getById(tableId).getProducts()
+                .stream()
+                .map(this::ConvertProdDTO)
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public void deleteProductsByTable(Integer tableId)
+    {
+        
+    }
+
+    @Override
     public void addTable(DinnerTable table)
     {
         dal.addTable(table);
@@ -62,6 +79,12 @@ public class TableService implements ITableService
     public TableDTO getByIdDTO(Integer id)
     {
         return ConvertDTO(dal.getById(id));
+    }
+
+    private ProductDTO ConvertProdDTO(Product product)
+    {
+        ProductDTO productDTO = modelMapper.map(product, ProductDTO.class);
+        return productDTO;
     }
 
     private TableDTO ConvertDTO(DinnerTable table)

@@ -1,5 +1,6 @@
 package com.example.restaurantapplication.serviceInterfaces;
 
+import com.example.restaurantapplication.dto.ProductDTO;
 import com.example.restaurantapplication.dto.TableDTO;
 import com.example.restaurantapplication.model.DinnerTable;
 
@@ -13,4 +14,6 @@ public interface ITableService
     DinnerTable saveAndFlush(DinnerTable table);
     DinnerTable getById(Integer id);
     TableDTO getByIdDTO(Integer id);
+    List<ProductDTO> getProductsByTable(Integer tableId);
+    void deleteProductsByTable(Integer tableId);
 }
