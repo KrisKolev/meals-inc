@@ -40,7 +40,7 @@ test {
 
 sonarqube {
     properties {
-        property "sonar.projectKey", "I455802_s3-cb04-its_AX0t47lAtMpB9kAiNuHr"
+        property "sonar.projectKey", "I455802_s3-cb04-its_AX5awsw38I76YVDw05Tr"
         property "sonar.qualitygate.wait", true
     }
 }
