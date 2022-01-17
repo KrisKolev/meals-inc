@@ -8,11 +8,33 @@
 }
 
 .tableContainer {
-  padding: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
   max-width: 50vw;
   width: 50vw;
   display: flex;
-  margin-left: 23vw;
+  justify-content: center;
+}
+
+.menu {
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.tableContainer1 {
+  padding-left: 30px;
+  padding-bottom: 30px;
+  max-width: 50vw;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+}
+
+.tableItem {
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 table {

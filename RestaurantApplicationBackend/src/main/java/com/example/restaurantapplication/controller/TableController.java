@@ -2,6 +2,7 @@ package com.example.restaurantapplication.controller;
 
 import com.example.restaurantapplication.dto.ProductDTO;
 import com.example.restaurantapplication.dto.TableDTO;
+import com.example.restaurantapplication.model.Employee;
 import com.example.restaurantapplication.model.Product;
 import com.example.restaurantapplication.model.DinnerTable;
 import com.example.restaurantapplication.serviceInterfaces.IProductService;
@@ -25,6 +26,8 @@ public class TableController
 
    @Autowired
    private IProductService productService;
+
+   private DinnerTable dinnerTable;
 
     @GetMapping()
     public ResponseEntity<List<TableDTO>> GetAllTables()
@@ -86,14 +89,20 @@ public class TableController
     @DeleteMapping("/deleteAssigned")
     public ResponseEntity<?> DeleteAssigned(@RequestParam int tableId)
     {
-        service.deleteProductsByTable(tableId);
+        for (int i = 0; i <= service.getAllTables().size(); i++)
+        {
+            if (dinnerTable.getTableId() == tableId)
+            {
+                service.deleteProductsByTable(tableId);
+            }
+        }
+
         return ResponseEntity.ok().body(tableId);
     }
 
     @DeleteMapping
-    public ResponseEntity<DinnerTable> DeleteTable(@RequestBody DinnerTable table)
+    public void DeleteTable(@RequestParam int tableId)
     {
-        service.deleteTable(table);
-        return ResponseEntity.ok().body(table);
+        service.deleteTable(tableId);
     }
 }

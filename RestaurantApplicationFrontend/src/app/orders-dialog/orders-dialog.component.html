@@ -1,12 +1,28 @@
 
 <div mat-dialog-title class="title"> {{data.tableName}} </div>
 
-<div class="orders">
-  <ul>
-    <li *ngFor = "let meal of mealsArray">
-      {{ meal.productName }} : {{ meal.productPrice }} €
-    </li>
-  </ul>
+<div class="menu">
+  <p>
+    Products currently on table
+  </p>
+</div>
+
+<div class="tableContainer1">
+  <mat-card class="tabl">
+    <mat-card class="tableItem">
+      <ul>
+        <li *ngFor = "let meal of mealsArray">
+          {{ meal.productName }} : {{ meal.productPrice }} €
+        </li>
+      </ul>
+    </mat-card>
+  </mat-card>
+</div>
+
+<div class="menu">
+  <p>
+    Menu
+  </p>
 </div>
 
 <div mat-card-content class="tableContainer">

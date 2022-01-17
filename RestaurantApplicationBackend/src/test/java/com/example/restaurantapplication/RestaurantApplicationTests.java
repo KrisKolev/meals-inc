@@ -1,29 +1,13 @@
 package com.example.restaurantapplication;
 
-import com.example.restaurantapplication.controller.EmployeeController;
-import com.example.restaurantapplication.dalInterfaces.IEmployeeDal;
-import com.example.restaurantapplication.dto.EmployeeDTO;
-import com.example.restaurantapplication.model.Employee;
-import com.example.restaurantapplication.repository.EmployeeDalJPA;
-import com.example.restaurantapplication.repository.IEmployeeRepository;
 import com.example.restaurantapplication.repository.MockDataRestaurant;
-import com.example.restaurantapplication.service.EmployeeService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.util.Assert;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @SpringBootTest
 class RestaurantApplicationTests
 {
-    private EmployeeController _eContr = new EmployeeController();
-
     @Test
     public void GetEmployeeTest()
     {

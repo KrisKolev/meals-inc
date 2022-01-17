@@ -36,9 +36,9 @@ public class TableDalJPA implements ITableDal
     }
 
     @Override
-    public void deleteTable(DinnerTable table)
+    public void deleteTable(int id)
     {
-        repo.delete(table);
+        repo.deleteById(id);
     }
 
     @Override

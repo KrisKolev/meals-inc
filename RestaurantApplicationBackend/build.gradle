@@ -3,6 +3,7 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
     id "org.sonarqube" version "3.3"
+    id "jacoco"
 }
 
 group = 'com.example'
@@ -44,3 +45,15 @@ sonarqube {
         property "sonar.qualitygate.wait", true
     }
 }
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+    }
+}
+
+plugins.withType(JacocoPlugin) {
+    tasks["test"].finalizedBy 'jacocoTestReport'
+}
+
+test.finalizedBy jacocoTestReport

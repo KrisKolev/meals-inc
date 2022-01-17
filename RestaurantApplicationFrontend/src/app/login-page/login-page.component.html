@@ -16,14 +16,14 @@
 
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Username</mat-label>
-        <input matInput [formControl]="employeeUsername" placeholder="Ex. John">
+        <input matInput [formControl]="employeeUsername" placeholder="Ex. John" id="employeeUsername">
       </mat-form-field>
 
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Password</mat-label>
         <input matInput
                [type]="hidePassword ? 'password' : 'text'"
-               [formControl]="employeePassword" placeholder="Ex. Doe">
+               [formControl]="employeePassword" placeholder="Ex. Doe" id="employeePassword">
         <button mat-icon-button matSuffix
                 (click)="hidePassword = !hidePassword"
                 [attr.aria-label]="'Hide password'"
@@ -34,7 +34,7 @@
 
       <br>
 
-      <button mat-fab class="login-icon" aria-label="Add icon" color="basic" (click)="loginCheck()">
+      <button mat-fab class="login-icon" aria-label="Add icon" color="basic" (click)="loginCheck()" id="loginButton">
         <mat-icon>login</mat-icon>
       </button>
     </mat-card>

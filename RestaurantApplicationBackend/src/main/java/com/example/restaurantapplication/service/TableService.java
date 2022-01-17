@@ -48,7 +48,7 @@ public class TableService implements ITableService
     @Override
     public void deleteProductsByTable(Integer tableId)
     {
-        
+
     }
 
     @Override
@@ -58,9 +58,9 @@ public class TableService implements ITableService
     }
 
     @Override
-    public void deleteTable(DinnerTable table)
+    public void deleteTable(int id)
     {
-        dal.deleteTable(table);
+        dal.deleteTable(id);
     }
 
     @Override

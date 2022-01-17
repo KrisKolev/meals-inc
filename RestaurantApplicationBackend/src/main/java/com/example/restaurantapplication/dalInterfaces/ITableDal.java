@@ -8,7 +8,7 @@ public interface ITableDal
 {
     List<DinnerTable> getAllTables();
     void addTable(DinnerTable table);
-    void deleteTable(DinnerTable table);
+    void deleteTable(int id);
     DinnerTable saveAndFlush(DinnerTable table);
     DinnerTable getById(Integer id);
 }

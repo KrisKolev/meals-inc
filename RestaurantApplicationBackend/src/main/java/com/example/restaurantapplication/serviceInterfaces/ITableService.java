@@ -10,7 +10,7 @@ public interface ITableService
 {
     List<TableDTO> getAllTables();
     void addTable(DinnerTable table);
-    void deleteTable(DinnerTable table);
+    void deleteTable(int id);
     DinnerTable saveAndFlush(DinnerTable table);
     DinnerTable getById(Integer id);
     TableDTO getByIdDTO(Integer id);
