@@ -39,17 +39,4 @@ export class LoginPageComponent implements OnInit {
 
     this.authService.login(employeeUsername,employeePassword);
   }
-
-  // getLogin(employeeUsername: string, employeePassword: string) {
-  //   axios.post(
-  //     'http://localhost:8080/employees',
-  //     {
-  //       employeeUsername: employeeUsername,
-  //       employeePassword: employeePassword,
-  //     },
-  //     { headers: { 'Access-Control-Allow-Origin': '*' } }
-  //   ).then((res) => {
-  //     alert(res.data);
-  //   })
-  // }
 }

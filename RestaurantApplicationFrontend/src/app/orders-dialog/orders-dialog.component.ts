@@ -49,6 +49,14 @@ export class OrdersDialogComponent implements OnInit {
     location.reload();
   }
 
+  deleteProduct(tableId:number) {
+    this.ordersService.deleteAssigned(tableId).subscribe((res) => {
+      console.log(res);
+    });
+
+    location.reload();
+  }
+
   applyFilter(filterValue: string){
     filterValue = filterValue.trim();
     filterValue = filterValue.toLowerCase();
@@ -57,17 +65,4 @@ export class OrdersDialogComponent implements OnInit {
 
   currentPrice: number;
   newPrice: number;
-
-  // calculateTotal() {
-  //   this.currentPrice = 0;
-  //   this.newPrice = 0;
-  //
-  //   for (let i = 0; i <= this.mealsArray.length; i++)
-  //   {
-  //     this.newPrice = this.currentPrice + this.mealsArray[i].productPrice;
-  //     this.currentPrice = this.newPrice;
-  //   }
-  //
-  //   return this.currentPrice;
-  // }
 }

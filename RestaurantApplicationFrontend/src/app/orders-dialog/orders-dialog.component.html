@@ -12,7 +12,7 @@
     <mat-card class="tableItem">
       <ul>
         <li *ngFor = "let meal of mealsArray">
-          {{ meal.productName }} : {{ meal.productPrice }} €
+          <span> {{ meal.productName }} : {{ meal.productPrice }} € </span>
         </li>
       </ul>
     </mat-card>
@@ -72,7 +72,7 @@
 </div>
 
 <div mat-dialog-actions class="checkout">
-  <button mat-raised-button class="close2" aria-label="Close icon">
+  <button mat-raised-button class="close2" aria-label="Close icon" (click)="deleteProduct(data.tableId)">
     Checkout
   </button>
 </div>

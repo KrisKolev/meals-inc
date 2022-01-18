@@ -48,6 +48,7 @@ import { InfoDialogComponent } from './info-dialog/info-dialog.component';
 import axios from "axios";
 import { OrdersPageComponent } from './orders-page/orders-page.component';
 import { OrdersDialogComponent} from './orders-dialog/orders-dialog.component';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { OrdersDialogComponent} from './orders-dialog/orders-dialog.component';
     LoginPageComponent,
     InfoDialogComponent,
     OrdersPageComponent,
-    OrdersDialogComponent
+    OrdersDialogComponent,
+    ChatComponent
   ],
     imports: [
         BrowserModule,

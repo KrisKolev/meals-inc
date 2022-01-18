@@ -6,37 +6,21 @@
 
 <div class="nice"></div>
 
-    <ul class="list-group">
-      <li *ngFor="let table of tables; let i = index">
-
-        <div class="tablesContainer">
-          <mat-card class="tabl">
-
-            <mat-card class="tableItem">
-
-              <div class="tableText">
-              Table: {{ table.tableId }}
-              <button mat-icon-button (click)="openThisDialog(i, table.tableName, table.tableId)">
-                <mat-icon>more_horiz</mat-icon>
-              </button>
-              </div>
-
-
-    <!--          <mat-menu #menu="matMenu">-->
-    <!--            <button class="buton" mat-menu-item>-->
-    <!--              <mat-icon>event_seat</mat-icon>-->
-    <!--              Manage Room-->
-    <!--            </button>-->
-    <!--                <button color="warn" mat-menu-item (click)="deleteRoom(room.id)">-->
-    <!--                  <mat-icon color="warn">delete</mat-icon>-->
-    <!--                  Delete-->
-    <!--                </button>-->
-    <!--          </mat-menu>-->
-
-            </mat-card>
-          </mat-card>
-        </div>
-      </li>
-    </ul>
+<ul class="list-group">
+  <li *ngFor="let table of tables; let i = index">
+    <div class="tablesContainer">
+      <mat-card class="tabl">
+        <mat-card class="tableItem">
+          <div class="tableText">
+            Table: {{ table.tableId }}
+            <button mat-icon-button (click)="openThisDialog(i, table.tableName, table.tableId)">
+              <mat-icon>more_horiz</mat-icon>
+            </button>
+          </div>
+        </mat-card>
+      </mat-card>
+    </div>
+  </li>
+</ul>
 
 

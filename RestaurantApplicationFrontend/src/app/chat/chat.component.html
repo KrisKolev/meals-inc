@@ -1,0 +1,30 @@
+<app-toolbar></app-toolbar>
+
+<div class="title">
+  <p> Chat </p>
+</div>
+
+<div class="tableContainer">
+  <mat-card class="tabl">
+    <mat-card class="chat">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item" *ngFor="let chatMessage of webSocketService.chatMessages">
+          <strong>{{ chatMessage.message }}</strong>
+        </li>
+      </ul>
+    </mat-card>
+    <form (ngSubmit)="sendMessage(sendForm)" #sendForm="ngForm">
+      <mat-card class="text">
+<!--        <mat-form-field appearance="outline">-->
+<!--          <mat-label>Username</mat-label>-->
+<!--          <input class="form-control-name" matInput placeholder="Username" name="Username" ngModel>-->
+<!--        </mat-form-field>-->
+        <mat-form-field appearance="outline" class="form-control-message">
+          <mat-label>Enter message</mat-label>
+          <input matInput placeholder="Message" name="message" ngModel>
+        </mat-form-field>
+          <button type="submit" mat-button class="btnsend" style="background-color: #5897b1">Send</button>
+      </mat-card>
+    </form>
+  </mat-card>
+</div>

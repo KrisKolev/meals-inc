@@ -89,15 +89,17 @@ public class TableController
     @DeleteMapping("/deleteAssigned")
     public ResponseEntity<?> DeleteAssigned(@RequestParam int tableId)
     {
-        for (int i = 0; i <= service.getAllTables().size(); i++)
+        DinnerTable table = service.getById(tableId);
+        List<Product> products = table.getProducts();
+
+        for (Product prod : products)
         {
-            if (dinnerTable.getTableId() == tableId)
-            {
-                service.deleteProductsByTable(tableId);
-            }
+            table.getProducts().remove(prod);
+            prod.getPlace().remove(table);
+            service.saveAndFlush(table);
         }
 
-        return ResponseEntity.ok().body(tableId);
+        return ResponseEntity.ok().body("Products deleted");
     }
 
     @DeleteMapping

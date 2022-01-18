@@ -2,6 +2,7 @@ package com.example.restaurantapplication.service;
 
 import com.example.restaurantapplication.dalInterfaces.IProductDal;
 import com.example.restaurantapplication.dto.ProductDTO;
+import com.example.restaurantapplication.model.DinnerTable;
 import com.example.restaurantapplication.model.Product;
 import com.example.restaurantapplication.serviceInterfaces.IProductService;
 import org.modelmapper.ModelMapper;

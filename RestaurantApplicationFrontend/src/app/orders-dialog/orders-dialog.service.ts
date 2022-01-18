@@ -40,4 +40,17 @@ export class OrdersDialogService {
     });
     return this.http.post(`${this.REST_API_TABLES}/assignProduct`, null, {params: httpParams, headers:httpHeaders});
   }
+
+  deleteAssigned(tableId: number) {
+    const httpParams = new HttpParams({
+      fromObject: {
+        tableId: tableId
+      }
+    });
+
+    const httpHeaders = new HttpHeaders({
+      'Authorization':this.authService.auth
+    });
+    return this.http.delete(`${this.REST_API_TABLES}/deleteAssigned`, {params: httpParams, headers: httpHeaders});
+  }
 }

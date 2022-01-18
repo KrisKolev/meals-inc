@@ -1,5 +1,6 @@
 package com.example.restaurantapplication.dalInterfaces;
 
+import com.example.restaurantapplication.model.DinnerTable;
 import com.example.restaurantapplication.model.Product;
 
 import java.util.List;

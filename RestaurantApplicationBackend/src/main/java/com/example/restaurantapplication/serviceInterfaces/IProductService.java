@@ -1,6 +1,7 @@
 package com.example.restaurantapplication.serviceInterfaces;
 
 import com.example.restaurantapplication.dto.ProductDTO;
+import com.example.restaurantapplication.model.DinnerTable;
 import com.example.restaurantapplication.model.Product;
 
 import java.util.List;

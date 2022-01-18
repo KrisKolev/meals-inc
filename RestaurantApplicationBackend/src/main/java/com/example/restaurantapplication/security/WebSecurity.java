@@ -37,6 +37,8 @@ public class WebSecurity extends WebSecurityConfigurerAdapter
                 .antMatchers(HttpMethod.DELETE, "/employees", "/products").hasAnyAuthority("Manager", "General")
                 .antMatchers(HttpMethod.GET, "/tables", "/tables/getById", "/tables/getAssigned").permitAll()
                 .antMatchers(HttpMethod.POST, "/tables", "/tables/assignProduct").permitAll()
+                .antMatchers(HttpMethod.DELETE, "/tables", "/tables/deleteAssigned").permitAll()
+                .antMatchers("/chat").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .addFilter(new JWTAuthenticationFilter(authenticationManager()))

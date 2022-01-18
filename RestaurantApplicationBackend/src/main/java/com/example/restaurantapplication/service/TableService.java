@@ -10,6 +10,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -43,12 +44,6 @@ public class TableService implements ITableService
                 .stream()
                 .map(this::ConvertProdDTO)
                 .collect(Collectors.toList());
-    }
-
-    @Override
-    public void deleteProductsByTable(Integer tableId)
-    {
-
     }
 
     @Override

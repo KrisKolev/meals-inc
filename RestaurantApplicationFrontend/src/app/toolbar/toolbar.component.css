@@ -16,7 +16,17 @@
   transition: 0.3s;
 }
 
+.chat-icon {
+  transition: 0.3s;
+  margin-left: 15px;
+}
+
 .home-icon:hover {
+  background-color: #325a68;
+  color: white;
+}
+
+.chat-icon:hover {
   background-color: #325a68;
   color: white;
 }

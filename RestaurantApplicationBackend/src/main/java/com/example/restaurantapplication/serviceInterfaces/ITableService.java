@@ -15,5 +15,4 @@ public interface ITableService
     DinnerTable getById(Integer id);
     TableDTO getByIdDTO(Integer id);
     List<ProductDTO> getProductsByTable(Integer tableId);
-    void deleteProductsByTable(Integer tableId);
 }
