@@ -7,7 +7,7 @@
 
 <div class="asd2"></div>
 
-<mat-tab-group mat-align-tabs="center">
+<mat-tab-group mat-align-tabs="center" role="manageEmpl">
   <mat-tab label="Overview">
 
     <div class="tableContainer">
@@ -39,7 +39,7 @@
           <ng-container matColumnDef="action">
             <th mat-header-cell *matHeaderCellDef> Action </th>
             <td mat-cell *matCellDef="let employee">
-              <button mat-icon-button color="warn" (click)="deleteEmployee(employee.employeeId)" *ngIf="isManager">
+              <button mat-icon-button color="warn" (click)="deleteEmployee(employee.employeeId)" *ngIf="isManager" id="deleteEmpl">
                 <mat-icon>delete</mat-icon>
               </button>
             </td>
@@ -71,24 +71,24 @@
           <form>
             <mat-form-field class="example-full-width" appearance="outline">
               <mat-label>Employee Name</mat-label>
-              <input matInput [formControl]="employeeName" placeholder="Ex. John" required>
+              <input matInput [formControl]="employeeName" placeholder="Ex. John" required id="name">
             </mat-form-field>
 
             <mat-form-field class="example-full-width" appearance="outline">
               <mat-label>Employee Role</mat-label>
-              <input matInput [formControl]="employeeRole" placeholder="Ex. Waiter" required>
+              <input matInput [formControl]="employeeRole" placeholder="Ex. Waiter" required id="role">
             </mat-form-field>
 
             <mat-form-field class="example-full-width" appearance="outline">
               <mat-label>Employee Username</mat-label>
-              <input matInput [formControl]="employeeUsername" placeholder="Ex. johndoe" required>
+              <input matInput [formControl]="employeeUsername" placeholder="Ex. johndoe" required id="username">
             </mat-form-field>
 
             <mat-form-field class="example-full-width" appearance="outline">
               <mat-label>Employee Password</mat-label>
               <input matInput
                      [type]="hidePassword ? 'password' : 'text'"
-                     [formControl]="employeePassword" placeholder="Password" required>
+                     [formControl]="employeePassword" placeholder="Password" required id="password">
               <button mat-icon-button matSuffix
                       (click)="hidePassword = !hidePassword"
                       [attr.aria-label]="'Hide password'"
@@ -99,7 +99,7 @@
 
             <br>
 
-            <button mat-fab class = "add-icon" aria-label="Add icon" color="basic" (click)="onCreateEmployee()">
+            <button mat-fab class = "add-icon" aria-label="Add icon" color="basic" (click)="onCreateEmployee()" id="addEmpl">
               <mat-icon><b>add</b></mat-icon>
             </button>
           </form>
